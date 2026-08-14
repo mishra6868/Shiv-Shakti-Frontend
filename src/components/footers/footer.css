@@ -1,0 +1,467 @@
+/* =========================
+   ABOUT US SECTION
+========================= */
+
+.aboutus {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 70px 30px;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 56% 44%;
+    gap: 40px;
+
+    background: #06121d;
+
+    color: white;
+}
+
+
+/* =========================
+   LEFT SIDE IMAGES
+========================= */
+
+.image1 {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+
+
+/* =========================
+   RIGHT SIDE CONTENT
+========================= */
+
+.header {
+    color: #d9a441;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    margin: 10px 0 15px;
+}
+
+
+.header2 {
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    margin: 0 0 12px;
+}
+
+
+.header3 {
+    color: #d9a441;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    margin: 0 0 18px;
+}
+
+
+.text {
+    color: #eeeeee;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 470px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   RIGHT CONTENT POSITION
+========================= */
+
+.header,
+.header2,
+.header3,
+.text {
+    grid-column: 2;
+}
+
+
+/* Images ko left side par rakhna */
+
+.image1 {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+}
+
+
+/* =========================
+   GOLDEN SMALL LINE
+========================= */
+
+.header::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 35px;
+    height: 1px;
+
+    background: #d9a441;
+
+    vertical-align: middle;
+
+    margin-right: 10px;
+}
+
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.image1 {
+    transition: transform 0.3s ease;
+}
+
+.image1:hover {
+    transform: scale(1.01);
+}
+
+/* =====================================
+   OUR LEADERSHIP SECTION
+===================================== */
+
+.owners-section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 70px 30px;
+
+    box-sizing: border-box;
+
+    background: #06121d;
+    color: white;
+}
+
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.owners-section .header {
+    color: #d9a441;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 35px;
+}
+
+.owners-section .header::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 35px;
+    height: 1px;
+
+    background: #d9a441;
+
+    margin-right: 10px;
+
+    vertical-align: middle;
+}
+
+
+/* =====================================
+   OWNER CARDS
+===================================== */
+
+.ownercard,
+.coownercard {
+    width: 48%;
+
+    min-height: 420px;
+
+    display: inline-block;
+
+    vertical-align: top;
+
+    box-sizing: border-box;
+
+    padding: 32px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(217, 164, 65, 0.35);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Space between both cards */
+
+.ownercard {
+    margin-right: 3%;
+}
+
+
+/* =====================================
+   OWNER IMAGE
+===================================== */
+
+.ownerimage,
+.coownerimage {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 50%;
+
+    border: 2px solid #d9a441;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   OWNER LABEL
+===================================== */
+
+.ownerhead1,
+.coownerhead1 {
+    color: #d9a441;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+
+    margin: 0 0 8px;
+}
+
+
+/* =====================================
+   OWNER NAME
+===================================== */
+
+.onwerhead2,
+.coownerhead2 {
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    margin: 0 0 8px;
+}
+
+
+/* =====================================
+   DESIGNATION
+===================================== */
+
+.ownerhead3,
+.coownerhead3 {
+    color: #d9a441;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    margin: 0 0 20px;
+}
+
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.text1,
+.text2 {
+    color: #d8dde2;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 440px;
+
+    margin: 0;
+}
+
+
+/* =====================================
+   CARD HOVER
+===================================== */
+
+.ownercard:hover,
+.coownercard:hover {
+    transform: translateY(-5px);
+
+    border-color: #d9a441;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   PRIVACY POLICY
+========================================= */
+
+.privacy-section {
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.privacy-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 45px;
+    box-sizing: border-box;
+
+    background: rgba(7, 17, 28, 0.9);
+
+    border: 1px solid rgba(217, 164, 65, 0.25);
+    border-radius: 16px;
+}
+
+
+/* Small heading */
+
+.privacy-small-heading {
+    margin: 0 0 8px;
+
+    color: #d9a441;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/* Main heading */
+
+.privacy-title {
+    margin: 0 0 30px;
+
+    color: white;
+
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+/* Content */
+
+.privacy-content {
+    width: 100%;
+}
+
+
+/* Each point */
+
+.privacy-block {
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.privacy-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+
+/* Point heading */
+
+.privacy-block h3 {
+    margin: 0 0 7px;
+
+    color: #d9a441;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* Text */
+
+.privacy-block p {
+    margin: 0;
+
+    color: #bfc7d1;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .privacy-section {
+        padding: 35px 15px;
+    }
+
+    .privacy-container {
+        padding: 28px 22px;
+    }
+
+    .privacy-title {
+        font-size: 24px;
+    }
+
+    .privacy-block h3 {
+        font-size: 16px;
+    }
+
+    .privacy-block p {
+        font-size: 13px;
+    }
+}

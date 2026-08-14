@@ -1,0 +1,132 @@
+/* =========================================
+   NYLON QUOTE FORM
+========================================= */
+
+.collections {
+    width: 100%;
+    max-width: 560px;
+
+    margin: 20px auto;
+    padding: 28px;
+
+    box-sizing: border-box;
+
+    background: rgba(3, 13, 23, 0.96);
+
+    border: 1px solid rgba(217, 164, 65, 0.7);
+
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+.collections input {
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    background: #071522;
+
+    border: 1px solid #344451;
+
+    border-radius: 6px;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.collections input::placeholder {
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* Input focus */
+
+.collections input:focus {
+
+    border-color: #d9a441;
+
+    background: #091a2a;
+
+    box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.12);
+}
+
+
+/* =========================================
+   REQUEST QUOTE BUTTON
+========================================= */
+
+.collections>button {
+
+    width: 100%;
+
+    height: 43px;
+
+    margin-top: 6px;
+
+    border: 1px solid #d9a441;
+
+    border-radius: 6px;
+
+    background: #d9a441;
+
+    color: #07111c;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Button hover */
+
+.collections>button:hover {
+
+    background: #e7b653;
+
+    border-color: #e7b653;
+
+    transform: translateY(-1px);
+}
+
+
+/* Button click */
+
+.collections>button:active {
+
+    transform: translateY(0);
+
+    background: #c39132;
+}

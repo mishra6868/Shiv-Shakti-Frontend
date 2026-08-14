@@ -1,0 +1,327 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #020b15;
+    box-sizing: border-box;
+    padding: 0 10px;
+
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100px;
+}
+
+.logo-symbol {
+    width: 55px;
+    height: 75px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: left;
+    line-height: 1;
+}
+
+.brand-text div:first-child {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.brand-text div:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-top: 4px;
+}
+
+.companyname {
+    width: 450px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.companyname h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: #dca43d;
+    white-space: nowrap;
+}
+
+.companyline {
+    width: 220px;
+    height: 15px;
+    margin: 5px auto 0;
+    position: relative;
+}
+
+.companyline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7px;
+    height: 1px;
+    background-color: #dca43d;
+}
+
+.companyline span {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #dca43d;
+    transform: rotate(45deg);
+    left: 50%;
+    top: 3px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.callbutton,
+.whatsappbutton,
+.mailbutton {
+    height: 52px;
+    padding: 0;
+    margin: 0;
+    background-color: #020b15;
+    border: 1px solid #263746;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.callbutton {
+    width: 140px;
+}
+
+.whatsappbutton {
+    width: 145px;
+}
+
+.mailbutton {
+    width: 190px;
+}
+
+.callbox,
+.whatsappbox,
+.mailbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.callbox {
+    gap: 9px;
+}
+
+.callicon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(69%) sepia(42%) saturate(900%) hue-rotate(355deg) brightness(95%);
+}
+
+.callno {
+    font-size: 13px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.whatsappbox {
+    gap: 9px;
+}
+
+.whatsappicon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.whatsappno {
+    font-size: 13px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.mailbox {
+    gap: 9px;
+}
+
+.mailicon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(69%) sepia(42%) saturate(900%) hue-rotate(355deg) brightness(95%);
+}
+
+.mailid {
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 15px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.usericon {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    border: 1px solid #dca43d;
+    border-radius: 50%;
+    background-color: #020b15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.usericon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+/* LOGIN BUTTON */
+
+.login {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.login button {
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+    padding: 0;
+}
+
+.login button:hover {
+    color: #dca43d;
+}
+
+/*  BUTTON */
+
+.signup {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.signup button {
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+    padding: 0;
+}
+
+.signup button:hover {
+    color: #dca43d;
+}
+
+
+.hamburgermenu {
+    position: relative;
+    margin-left: 30px;
+}
+
+.hamburgermenu summary {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #dca43d;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    list-style: none;
+}
+
+.hamburgermenu summary::-webkit-details-marker {
+    display: none;
+}
+
+.hamburgermenu summary img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.menubox {
+    position: absolute;
+    top: 52px;
+    right: 0;
+    width: 230px;
+    padding: 8px;
+    background-color: #020b15;
+    border: 1px solid #dca43d;
+    border-radius: 12px;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.menubox a {
+    display: block;
+    padding: 13px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #263746;
+    box-sizing: border-box;
+}
+
+.menubox a:last-child {
+    border-bottom: none;
+}
+
+.menubox a:hover {
+    color: #dca43d;
+    background-color: #081522;
+    border-radius: 7px;
+}

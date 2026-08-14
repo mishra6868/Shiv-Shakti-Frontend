@@ -1,0 +1,234 @@
+/* =========================================
+   REQUEST QUOTE FORM
+   ========================================= */
+
+.collections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 5px;
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.collections input {
+    width: 100%;
+    height: 40px;
+
+    box-sizing: border-box;
+
+    padding: 0 14px;
+
+    background: #061522;
+    color: #ffffff;
+
+    border: 1px solid #344553;
+    border-radius: 6px;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    transition: all 0.25s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.collections input::placeholder {
+    color: #8d98a3;
+}
+
+
+/* INPUT HOVER */
+
+.collections input:hover {
+    border-color: #8a672b;
+}
+
+
+/* INPUT FOCUS */
+
+.collections input:focus {
+    border-color: #dca43d;
+
+    box-shadow:
+        0 0 0 1px rgba(220, 164, 61, 0.15),
+        0 0 8px rgba(220, 164, 61, 0.15);
+}
+
+
+/* =========================================
+   ADDITIONAL MESSAGE
+   ========================================= */
+
+/*
+   Tumhara additional message abhi input hai,
+   isliye usko thoda bada kar rahe hain.
+*/
+
+.collections input:last-of-type {
+    grid-column: 1 / -1;
+    height: 75px;
+
+    padding: 12px 14px;
+}
+
+
+/* =========================================
+   REQUEST QUOTE BUTTON
+   ========================================= */
+
+.collections button {
+    grid-column: 1 / -1;
+
+    width: 230px;
+    height: 43px;
+
+    justify-self: center;
+
+    margin-top: 8px;
+
+    background: linear-gradient(135deg,
+            #c88f2d,
+            #e2ad4b);
+
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.collections button:hover {
+    background: linear-gradient(135deg,
+            #dda33a,
+            #f0bd55);
+
+    box-shadow:
+        0 0 15px rgba(220, 164, 61, 0.3);
+
+    transform: translateY(-1px);
+}
+
+
+/* BUTTON ACTIVE */
+
+.collections button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ANT DESIGN MODAL
+   ========================================= */
+
+/* Modal ka main box */
+
+.ant-modal-content {
+    background: #020f1c !important;
+
+    border: 1px solid #c99435;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 0 25px rgba(220, 164, 61, 0.18),
+        0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Modal heading */
+
+.ant-modal-title {
+    color: #e5ad4b !important;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px !important;
+
+    text-align: center;
+}
+
+
+/* Modal body */
+
+.ant-modal-body {
+    padding: 10px 20px 20px !important;
+}
+
+
+/* Close button */
+
+.ant-modal-close {
+    color: #ffffff !important;
+}
+
+.ant-modal-close:hover {
+    color: #dca43d !important;
+}
+
+
+/* =========================================
+   MODAL OVERLAY
+   ========================================= */
+
+.ant-modal-mask {
+    background: rgba(0, 7, 14, 0.78) !important;
+}
+
+
+/* =========================================
+   MODAL HEADER LINE
+   ========================================= */
+
+.ant-modal-header {
+    background: transparent !important;
+
+    border-bottom: 1px solid #263746 !important;
+
+    padding-bottom: 12px !important;
+
+    margin-bottom: 12px !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .collections {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .collections input:last-of-type {
+        grid-column: auto;
+    }
+
+    .collections button {
+        grid-column: auto;
+        width: 100%;
+    }
+
+}

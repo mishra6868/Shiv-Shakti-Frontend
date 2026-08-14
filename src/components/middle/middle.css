@@ -1,0 +1,64 @@
+/*fabric slider*/
+.fabric-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.fabric-slider-track {
+    display: flex;
+    width: 400%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.fabric-slide {
+    width: 25%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.fabric-prev,
+.fabric-next {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d9a441;
+
+    background: rgba(5, 15, 25, 0.85);
+
+    color: white;
+
+    font-size: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition: 0.3s ease;
+}
+
+.fabric-prev {
+    left: 15px;
+}
+
+.fabric-next {
+    right: 15px;
+}
+
+.fabric-prev:hover,
+.fabric-next:hover {
+    background: #d9a441;
+    color: #07111c;
+    box-shadow: 0 0 15px rgba(217, 164, 65, 0.5);
+}

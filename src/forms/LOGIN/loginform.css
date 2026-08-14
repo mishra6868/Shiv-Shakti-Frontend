@@ -1,0 +1,70 @@
+/* LOGIN FORM */
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 10px 5px 5px;
+}
+
+/* INPUTS */
+
+.loginform input {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 14px;
+    box-sizing: border-box;
+
+    background: #071522;
+    border: 1px solid #3b4b5a;
+    border-radius: 8px;
+
+    color: white;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+
+    outline: none;
+}
+
+/* PLACEHOLDER */
+
+.loginform input::placeholder {
+    color: #9aa6b2;
+}
+
+/* INPUT FOCUS */
+
+.loginform input:focus {
+    border-color: #dca43d;
+    box-shadow: 0 0 6px rgba(220, 164, 61, 0.25);
+}
+
+/* LOGIN BUTTON */
+
+.loginform button {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 5px;
+
+    background: #dca43d;
+    color: #07111c;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+
+.loginform button:hover {
+    background: #f0bd55;
+    box-shadow: 0 0 12px rgba(220, 164, 61, 0.35);
+}

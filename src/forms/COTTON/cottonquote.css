@@ -1,0 +1,110 @@
+/* =========================
+   COTTON QUOTE FORM
+========================= */
+
+.collections {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    background: #020b15;
+
+    border: 1px solid #d9a441;
+    border-radius: 14px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.collections input {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #334454;
+    border-radius: 6px;
+
+    outline: none;
+
+    background: #071522;
+
+    color: white;
+
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+
+    transition: 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.collections input::placeholder {
+    color: #9aa7b2;
+}
+
+
+/* Input focus */
+
+.collections input:focus {
+    border-color: #d9a441;
+
+    box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.12);
+}
+
+
+/* =========================
+   REQUEST QUOTE BUTTON
+========================= */
+
+.collections button {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 12px;
+
+    border: 1px solid #d9a441;
+    border-radius: 6px;
+
+    background: #d9a441;
+
+    color: #07111c;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+/* Button hover */
+
+.collections button:hover {
+    background: #e7b653;
+
+    box-shadow: 0 5px 15px rgba(217, 164, 65, 0.2);
+}
+
+
+/* Button click */
+
+.collections button:active {
+    transform: scale(0.98);
+}
