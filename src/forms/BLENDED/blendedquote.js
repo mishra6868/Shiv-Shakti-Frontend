@@ -27,17 +27,17 @@ function Quoteblendedform() {
 
             body: JSON.stringify({
 
-                "customer id": customerid,
-                "Customer name": customername,
-                "Company name": companyname,
-                "fabric Category": fabriccategory,
-                "fabric subtype": fabricsubtype,
+                "customer_id": customerid,
+                "Customer_name": customername,
+                "Company_name": companyname,
+                "fabric_Category": fabriccategory,
+                "fabric_subtype": fabricsubtype,
                 "Colour": colour,
-                "gsm expected": gsmexpected,
-                "quantity require kg/m": quantityrequire,
-                "phone no": phoneno,
-                "e mail": email,
-                "additional message": additionalmessage
+                "gsm_expected": gsmexpected,
+                "quantity_require_kg/m": quantityrequire,
+                "phone_no": phoneno,
+                "email": email,
+                "additional_message": additionalmessage
 
             })
         });
