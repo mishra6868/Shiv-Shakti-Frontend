@@ -35,7 +35,7 @@ function Polysterquote() {
                 "fabric_subtype": fabricsubtype,
                 "Colour": colour,
                 "gsm_expected": gsmexpected,
-                "quantity_require_kg/m": quantityrequire,
+                "quantity_require_kg_m": quantityrequire,
                 "phone_no": phoneno,
                 "email": email,
                 "additional_message": additionalmessage
