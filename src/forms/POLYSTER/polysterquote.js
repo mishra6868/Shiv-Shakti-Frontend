@@ -37,7 +37,7 @@ function Polysterquote() {
                 "gsm_expected": gsmexpected,
                 "quantity_require_kg/m": quantityrequire,
                 "phone_no": phoneno,
-                "e_mail": email,
+                "email": email,
                 "additional_message": additionalmessage
 
             })
