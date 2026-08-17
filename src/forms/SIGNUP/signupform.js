@@ -7,7 +7,7 @@ function Signupform() {
     let [confirmpassword, setconfirmpassword] = useState("")
 
     let signup = async () => {
-        let response = await fetch("https://e50ee214-bf67-4671-a7a5-042634bf1e30.mock.pstmn.io/user/signup",
+        let response = await fetch(`${process.env.REACT_APP_API_URI}/api/user/signup`,
             {
                 method: "POST",
                 headers: {

@@ -9,7 +9,7 @@ function Loginform() {
     let login = async () => {
 
         let response = await fetch(
-            "https://e50ee214-bf67-4671-a7a5-042634bf1e30.mock.pstmn.io/user/login",
+            `${process.env.REACT_APP_API_URI}/api/user/login`,
             {
                 method: "POST",
 

@@ -2,21 +2,17 @@ import { useState, useEffect } from "react";
 
 function Subtype({ setsubtype }) {
 
-  let [fabric, setFabric] = useState({});
+  let [subtypes, setSubtypes] = useState([]);
 
   let getData = async () => {
 
     let response = await fetch(
-      "https://e50ee214-bf67-4671-a7a5-042634bf1e30.mock.pstmn.io/user/productlist"
+      `${process.env.REACT_APP_API_URI}/api/user/subtypes?name=Polyester`
     );
 
     let data = await response.json();
 
-    let polyester = data.products.find(
-      (item) => item.name === "Polyester"
-    );
-
-    setFabric(polyester);
+    setSubtypes(data);
   };
 
   useEffect(() => {
@@ -25,7 +21,7 @@ function Subtype({ setsubtype }) {
 
   return (
     <div>
-      {fabric.subTypes?.map((item) => (
+      {subtypes.map((item) => (
 
         <button
           key={item.id}
@@ -35,7 +31,6 @@ function Subtype({ setsubtype }) {
         </button>
 
       ))}
-
     </div>
   );
 }
