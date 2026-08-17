@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-import "./polysterquote.css"
+import "./polysterquote.css";
 
 function Polysterquote() {
 
@@ -19,33 +18,133 @@ function Polysterquote() {
 
     let requestquote = async () => {
 
-        let response = await fetch(`${process.env.REACT_APP_API_URI}/api/user/reqquote`, {
-            method: "POST",
+        if (!customerid.trim()) {
+            alert("Please enter customer ID");
+            return;
+        }
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+        if (!customername.trim()) {
+            alert("Please enter customer name");
+            return;
+        }
 
-            body: JSON.stringify({
+        let nameRegex = /^[A-Za-z ]+$/;
 
-                "customer_id": customerid,
-                "Customer_name": customername,
-                "Company_name": companyname,
-                "fabric_Category": fabriccategory,
-                "fabric_subtype": fabricsubtype,
-                "Colour": colour,
-                "gsm_expected": gsmexpected,
-                "quantity_require_kg_m": quantityrequire,
-                "phone_no": phoneno,
-                "email": email,
-                "additional_message": additionalmessage
+        if (!nameRegex.test(customername.trim())) {
+            alert("Customer name should contain only letters");
+            return;
+        }
 
-            })
-        });
+        if (!companyname.trim()) {
+            alert("Please enter company name");
+            return;
+        }
 
-        let data = await response.json();
+        if (!fabriccategory.trim()) {
+            alert("Please enter fabric category");
+            return;
+        }
 
-        console.log(data);
+        if (!fabricsubtype.trim()) {
+            alert("Please enter fabric subtype");
+            return;
+        }
+
+        if (!colour.trim()) {
+            alert("Please enter colour");
+            return;
+        }
+
+        if (!gsmexpected.trim()) {
+            alert("Please enter GSM");
+            return;
+        }
+
+        if (!/^[0-9]+$/.test(gsmexpected.trim())) {
+            alert("GSM should contain only numbers");
+            return;
+        }
+
+        if (!quantityrequire.trim()) {
+            alert("Please enter required quantity");
+            return;
+        }
+
+        if (!/^[0-9]+(\.[0-9]+)?$/.test(quantityrequire.trim())) {
+            alert("Quantity should contain only numbers");
+            return;
+        }
+
+        if (!phoneno.trim()) {
+            alert("Please enter phone number");
+            return;
+        }
+
+        if (!/^[0-9]{10}$/.test(phoneno.trim())) {
+            alert("Phone number must contain exactly 10 digits");
+            return;
+        }
+
+        if (!email.trim()) {
+            alert("Please enter email");
+            return;
+        }
+
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email.trim())) {
+            alert("Please enter a valid email");
+            return;
+        }
+
+
+        try {
+
+            let response = await fetch(
+                `${process.env.REACT_APP_API_URI}/api/user/reqquote`,
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        customer_id: customerid.trim(),
+                        Customer_name: customername.trim(),
+                        Company_name: companyname.trim(),
+                        fabric_Category: fabriccategory.trim(),
+                        fabric_subtype: fabricsubtype.trim(),
+                        Colour: colour.trim(),
+                        gsm_expected: gsmexpected.trim(),
+                        quantity_require_kg_m: quantityrequire.trim(),
+                        phone_no: phoneno.trim(),
+                        email: email.trim(),
+                        additional_message: additionalmessage.trim()
+
+                    })
+                }
+            );
+
+            let data = await response.json();
+
+            if (!response.ok) {
+                alert(data.message || "Something went wrong");
+                return;
+            }
+
+            alert(data.message);
+
+            console.log(data);
+
+        } catch (error) {
+
+            alert("Server error. Please try again.");
+
+            console.log(error);
+
+        }
     };
 
 
