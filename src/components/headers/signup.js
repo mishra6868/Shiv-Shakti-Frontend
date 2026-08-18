@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal } from "antd";
 import SignupForm from "../../forms/SIGNUP/signupform";
-import "./header.css"
+import "./header.css";
 
 function Signup() {
 
@@ -21,7 +21,9 @@ function Signup() {
                 footer={null}
                 centered
             >
-                <SignupForm />
+                <SignupForm
+                    onSuccess={() => setOpen(false)}
+                />
             </Modal>
 
         </div>

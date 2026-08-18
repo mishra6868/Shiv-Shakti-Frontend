@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal } from "antd";
 import LoginForm from "../../forms/LOGIN/loginform";
-import "./header.css"
+import "./header.css";
 
 function Login() {
 
@@ -21,7 +21,9 @@ function Login() {
                 footer={null}
                 centered
             >
-                <LoginForm />
+                <LoginForm
+                    onSuccess={() => setOpen(false)}
+                />
             </Modal>
 
         </div>

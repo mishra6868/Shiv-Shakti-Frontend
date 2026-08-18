@@ -1,24 +1,29 @@
 import { useState, useEffect } from "react";
-import "../../middle/middle.css"
-import "./cotton.css"
+import "../../middle/middle.css";
+import "./cotton.css";
 
 function Subtypes({ setsubtype }) {
 
-  let [fabric, setFabric] = useState({});
+  let [subtypes, setSubtypes] = useState([]);
 
   let getData = async () => {
 
-    let response = await fetch(
-      "https://e50ee214-bf67-4671-a7a5-042634bf1e30.mock.pstmn.io/user/productlist"
-    );
+    try {
 
-    let data = await response.json();
+      let response = await fetch(
+        `${process.env.REACT_APP_API_URI}/api/user/subtypes?name=Cotton`
+      );
 
-    let cotton = data.products.find(
-      (item) => item.name === "Cotton"
-    );
+      let data = await response.json();
 
-    setFabric(cotton);
+      setSubtypes(data);
+
+    } catch (error) {
+
+      console.log("Cotton subtype error:", error);
+
+    }
+
   };
 
   useEffect(() => {
@@ -26,8 +31,10 @@ function Subtypes({ setsubtype }) {
   }, []);
 
   return (
+
     <div>
-      {fabric.subTypes?.map((item) => (
+
+      {subtypes.map((item) => (
 
         <button
           key={item.id}
@@ -39,6 +46,7 @@ function Subtypes({ setsubtype }) {
       ))}
 
     </div>
+
   );
 }
 
