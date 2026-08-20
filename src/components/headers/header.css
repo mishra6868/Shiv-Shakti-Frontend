@@ -325,3 +325,891 @@
     background-color: #081522;
     border-radius: 7px;
 }
+
+/* =========================================================
+   HEADER - DESKTOP
+========================================================= */
+
+.header {
+    display: flex;
+    align-items: center;
+
+    height: 100px;
+    width: 100%;
+
+    background-color: #020b15;
+
+    box-sizing: border-box;
+
+    padding: 0 10px;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   COMPANY LOGO / BRAND
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    height: 100px;
+
+    flex-shrink: 0;
+}
+
+.logo-symbol {
+    width: 55px;
+    height: 75px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.brand-text {
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    text-align: left;
+
+    line-height: 1;
+}
+
+.brand-text div:first-child {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.brand-text div:last-child {
+    font-size: 20px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   CENTER COMPANY NAME
+========================================================= */
+
+.companyname {
+    width: 450px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+.companyname h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+    font-weight: bold;
+
+    color: #dca43d;
+
+    white-space: nowrap;
+}
+
+.companyline {
+    width: 220px;
+    height: 15px;
+
+    margin: 5px auto 0;
+
+    position: relative;
+}
+
+.companyline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 7px;
+
+    height: 1px;
+
+    background-color: #dca43d;
+}
+
+.companyline span {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #dca43d;
+
+    transform: rotate(45deg);
+
+    left: 50%;
+    top: 3px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.callbutton,
+.whatsappbutton,
+.mailbutton {
+    height: 52px;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: #020b15;
+
+    border: 1px solid #263746;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.callbutton {
+    width: 140px;
+}
+
+.whatsappbutton {
+    width: 145px;
+}
+
+.mailbutton {
+    width: 190px;
+}
+
+.callbox,
+.whatsappbox,
+.mailbox {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    overflow: hidden;
+}
+
+.callbox,
+.whatsappbox,
+.mailbox {
+    gap: 9px;
+}
+
+.callicon,
+.whatsappicon,
+.mailicon {
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+.callicon,
+.mailicon {
+    filter:
+        brightness(0) saturate(100%) invert(69%) sepia(42%) saturate(900%) hue-rotate(355deg) brightness(95%);
+}
+
+.callno,
+.whatsappno {
+    font-size: 13px;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+.mailid {
+    font-size: 12px;
+
+    color: #ffffff;
+
+    line-height: 15px;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   USER ICON
+========================================================= */
+
+.usericon {
+    width: 40px;
+    height: 40px;
+
+    margin-left: auto;
+
+    border: 1px solid #dca43d;
+
+    border-radius: 50%;
+
+    background-color: #020b15;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+}
+
+.usericon img {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter: brightness(0) invert(1);
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login {
+    display: flex;
+    align-items: center;
+
+    margin-left: 20px;
+
+    flex-shrink: 0;
+}
+
+.login button {
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.login button:hover {
+    color: #dca43d;
+}
+
+
+/* =========================================================
+   SIGNUP
+========================================================= */
+
+.signup {
+    display: flex;
+    align-items: center;
+
+    margin-left: 25px;
+
+    flex-shrink: 0;
+}
+
+.signup button {
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.signup button:hover {
+    color: #dca43d;
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburgermenu {
+    position: relative;
+
+    margin-left: 30px;
+
+    flex-shrink: 0;
+}
+
+.hamburgermenu summary {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid #dca43d;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    list-style: none;
+}
+
+.hamburgermenu summary::-webkit-details-marker {
+    display: none;
+}
+
+.hamburgermenu summary img {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter: brightness(0) invert(1);
+}
+
+
+/* =========================================================
+   HAMBURGER MENU BOX
+========================================================= */
+
+.menubox {
+    position: absolute;
+
+    top: 52px;
+    right: 0;
+
+    width: 230px;
+
+    padding: 8px;
+
+    background-color: #020b15;
+
+    border: 1px solid #dca43d;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    z-index: 1000;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.menubox a {
+    display: block;
+
+    padding: 13px 12px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+
+    border-bottom: 1px solid #263746;
+
+    box-sizing: border-box;
+}
+
+.menubox a:last-child {
+    border-bottom: none;
+}
+
+.menubox a:hover {
+    color: #dca43d;
+
+    background-color: #081522;
+
+    border-radius: 7px;
+}
+
+
+/* =========================================================
+   MOBILE
+   0px - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .header {
+        width: 100%;
+
+        height: auto;
+        min-height: 0;
+
+        padding: 9px 10px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        align-items: center;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+    }
+
+
+    /* =====================================================
+       ROW 1
+       
+       LOGO | LOGIN | SIGNUP | HAMBURGER
+       ===================================================== */
+
+    .brand {
+        order: 1;
+
+        height: 46px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 5px;
+
+        /*
+         * Brand takes available space.
+         * Login/Signup/Hamburger stay on right.
+         */
+        flex: 1 1 auto;
+
+        min-width: 0;
+
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .logo-symbol {
+        width: 36px;
+        height: 43px;
+
+        object-fit: contain;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =====================================================
+       SHIV SHAKTI FABRICS
+    ===================================================== */
+
+    .brand-text {
+        min-width: 0;
+
+        white-space: nowrap;
+
+        line-height: 1;
+    }
+
+    .brand-text div:first-child {
+        font-size: 16px;
+
+        line-height: 18px;
+    }
+
+    .brand-text div:last-child {
+        font-size: 12px;
+
+        letter-spacing: 2.3px;
+
+        margin-top: 3px;
+
+        line-height: 13px;
+    }
+
+
+    /* =====================================================
+       GOLD COMPANY NAME HIDE
+    ===================================================== */
+
+    .companyname {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       CONTACT
+       
+       DOM mein Contact pehle hai,
+       lekin order se ise ROW 2 mein bhej rahe hain.
+    ===================================================== */
+
+    .contact {
+        order: 5;
+
+        width: 100%;
+
+        flex: 0 0 100%;
+        flex-basis: 100%;
+
+        margin-top: 8px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 6px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       USER ICON HIDE
+    ===================================================== */
+
+    .usericon {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       LOGIN
+    ===================================================== */
+
+    .login {
+        order: 2;
+
+        height: 36px;
+
+        display: flex;
+        align-items: center;
+
+        margin-left: 5px;
+
+        flex-shrink: 0;
+    }
+
+    .login button {
+        font-size: 12px;
+
+        padding: 6px 5px;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       SIGNUP
+    ===================================================== */
+
+    .signup {
+        order: 3;
+
+        height: 36px;
+
+        display: flex;
+        align-items: center;
+
+        margin-left: 2px;
+
+        flex-shrink: 0;
+    }
+
+    .signup button {
+        font-size: 12px;
+
+        padding: 6px 5px;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+    ===================================================== */
+
+    .hamburgermenu {
+        order: 4;
+
+        position: relative;
+
+        margin-left: 3px;
+
+        flex-shrink: 0;
+    }
+
+    .hamburgermenu summary {
+        width: 35px;
+        height: 35px;
+
+        border-radius: 50%;
+    }
+
+    .hamburgermenu summary img {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* =====================================================
+       CONTACT BUTTONS
+       
+       3 equal-width buttons
+       ===================================================== */
+
+    .callbutton,
+    .whatsappbutton,
+    .mailbutton {
+
+        width: auto;
+
+        height: 41px;
+
+        flex: 1 1 0;
+
+        min-width: 0;
+
+        padding: 0;
+
+        margin: 0;
+
+        border-radius: 8px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       CONTACT BOX
+    ===================================================== */
+
+    .callbox,
+    .whatsappbox,
+    .mailbox {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        min-width: 0;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       CONTACT ICONS
+    ===================================================== */
+
+    .callicon,
+    .whatsappicon,
+    .mailicon {
+        width: 17px;
+        height: 17px;
+
+        flex-shrink: 0;
+
+        object-fit: contain;
+    }
+
+
+    /* =====================================================
+       CONTACT TEXT
+    ===================================================== */
+
+    .callno,
+    .whatsappno,
+    .mailid {
+        min-width: 0;
+
+        max-width: 100%;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+
+        margin: 0;
+    }
+
+    .callno {
+        font-size: 9px;
+    }
+
+    .whatsappno {
+        font-size: 9px;
+    }
+
+    .mailid {
+        font-size: 8px;
+
+        line-height: 10px;
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    .menubox {
+        top: 44px;
+
+        right: 0;
+
+        width: 205px;
+
+        z-index: 1000;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   0px - 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .header {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .brand {
+        gap: 4px;
+    }
+
+    .logo-symbol {
+        width: 33px;
+        height: 40px;
+    }
+
+    .brand-text div:first-child {
+        font-size: 14px;
+    }
+
+    .brand-text div:last-child {
+        font-size: 10px;
+
+        letter-spacing: 1.8px;
+    }
+
+    .login {
+        margin-left: 2px;
+    }
+
+    .signup {
+        margin-left: 0;
+    }
+
+    .login button,
+    .signup button {
+        font-size: 11px;
+
+        padding: 5px 3px;
+    }
+
+    .hamburgermenu {
+        margin-left: 1px;
+    }
+
+    .hamburgermenu summary {
+        width: 33px;
+        height: 33px;
+    }
+
+    .contact {
+        gap: 4px;
+    }
+
+    .callbutton,
+    .whatsappbutton,
+    .mailbutton {
+        height: 39px;
+    }
+
+    .callicon,
+    .whatsappicon,
+    .mailicon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .callno,
+    .whatsappno {
+        font-size: 8px;
+    }
+
+    .mailid {
+        font-size: 7.5px;
+    }
+}

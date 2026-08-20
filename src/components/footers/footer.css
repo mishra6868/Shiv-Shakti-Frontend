@@ -465,3 +465,601 @@
         font-size: 13px;
     }
 }
+
+/* =========================================================
+   RESPONSIVE ABOUT + LEADERSHIP + PRIVACY
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   901px - 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    /* =========================
+       ABOUT US
+    ========================= */
+
+    .aboutus {
+        width: 100%;
+        padding: 55px 25px;
+
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+
+        gap: 30px;
+    }
+
+
+    .image1 {
+        width: 100%;
+        height: 380px;
+    }
+
+
+    .header2 {
+        font-size: 29px;
+    }
+
+
+    .header3 {
+        font-size: 20px;
+    }
+
+
+    .text {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       LEADERSHIP
+    ========================= */
+
+    .owners-section {
+        padding: 55px 25px;
+    }
+
+
+    .ownercard,
+    .coownercard {
+        width: 48%;
+        min-height: 390px;
+        padding: 28px;
+    }
+
+
+    .ownerimage,
+    .coownerimage {
+        width: 135px;
+        height: 135px;
+    }
+
+
+    .onwerhead2,
+    .coownerhead2 {
+        font-size: 25px;
+    }
+
+
+    .text1,
+    .text2 {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       PRIVACY
+    ========================= */
+
+    .privacy-section {
+        padding: 45px 20px;
+    }
+
+
+    .privacy-container {
+        padding: 32px 35px;
+    }
+}
+
+
+
+/* =========================================================
+   SMALL TABLET / LARGE MOBILE
+   601px - 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* =========================
+       ABOUT US
+    ========================= */
+
+    .aboutus {
+        padding: 45px 20px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* Remove desktop grid positioning */
+
+    .image1 {
+        grid-column: 1;
+        grid-row: auto;
+
+        width: 100%;
+        height: 350px;
+    }
+
+
+    .header,
+    .header2,
+    .header3,
+    .text {
+        grid-column: 1;
+    }
+
+
+    .header {
+        margin: 0 0 12px;
+    }
+
+
+    .header2 {
+        font-size: 30px;
+    }
+
+
+    .header3 {
+        font-size: 20px;
+    }
+
+
+    .text {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       LEADERSHIP
+    ========================= */
+
+    .owners-section {
+        padding: 45px 20px;
+    }
+
+
+    .owners-section .header {
+        margin-bottom: 30px;
+    }
+
+
+    .ownercard,
+    .coownercard {
+        width: 100%;
+
+        min-height: auto;
+
+        display: block;
+
+        margin: 0 0 25px;
+
+        padding: 28px;
+    }
+
+
+    .coownercard {
+        margin-bottom: 0;
+    }
+
+
+    .ownerimage,
+    .coownerimage {
+        width: 135px;
+        height: 135px;
+    }
+
+
+    .onwerhead2,
+    .coownerhead2 {
+        font-size: 26px;
+    }
+
+
+    .text1,
+    .text2 {
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       PRIVACY
+    ========================= */
+
+    .privacy-section {
+        padding: 40px 20px;
+    }
+
+
+    .privacy-container {
+        padding: 30px;
+    }
+
+
+    .privacy-title {
+        font-size: 26px;
+    }
+}
+
+
+
+/* =========================================================
+   MOBILE
+   600px AND BELOW
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================================
+       ABOUT US
+       ===================================================== */
+
+    .aboutus {
+        width: 100%;
+
+        padding: 35px 15px;
+
+        gap: 22px;
+
+        overflow: hidden;
+    }
+
+
+    /* Image */
+
+    .image1 {
+        width: 100%;
+
+        height: 240px;
+
+        border-radius: 8px;
+    }
+
+
+    /* Small heading */
+
+    .header {
+        font-size: 12px;
+
+        letter-spacing: 1.5px;
+
+        margin: 0 0 12px;
+    }
+
+
+    .header::before {
+        width: 28px;
+
+        margin-right: 8px;
+    }
+
+
+    /* Main heading */
+
+    .header2 {
+        font-size: 25px;
+
+        line-height: 1.2;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* Gold heading */
+
+    .header3 {
+        font-size: 18px;
+
+        line-height: 1.4;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* Description */
+
+    .text {
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        max-width: 100%;
+    }
+
+
+
+    /* =====================================================
+       LEADERSHIP
+       ===================================================== */
+
+    .owners-section {
+        width: 100%;
+
+        padding: 35px 15px;
+
+        overflow: hidden;
+    }
+
+
+    /* Section heading */
+
+    .owners-section .header {
+        font-size: 12px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .owners-section .header::before {
+        width: 28px;
+
+        margin-right: 8px;
+    }
+
+
+    /* Cards */
+
+    .ownercard,
+    .coownercard {
+
+        width: 100%;
+
+        min-height: 0;
+
+        display: block;
+
+        padding: 22px;
+
+        margin: 0 0 18px;
+
+        border-radius: 10px;
+    }
+
+
+    .coownercard {
+        margin-bottom: 0;
+    }
+
+
+    /* Owner images */
+
+    .ownerimage,
+    .coownerimage {
+
+        width: 110px;
+        height: 110px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Owner label */
+
+    .ownerhead1,
+    .coownerhead1 {
+
+        font-size: 12px;
+
+        letter-spacing: 1.3px;
+
+        margin-bottom: 7px;
+    }
+
+
+    /* Owner name */
+
+    .onwerhead2,
+    .coownerhead2 {
+
+        font-size: 23px;
+
+        line-height: 1.2;
+
+        margin-bottom: 7px;
+    }
+
+
+    /* Designation */
+
+    .ownerhead3,
+    .coownerhead3 {
+
+        font-size: 13px;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* Description */
+
+    .text1,
+    .text2 {
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        max-width: 100%;
+    }
+
+
+
+    /* =====================================================
+       PRIVACY POLICY
+       ===================================================== */
+
+    .privacy-section {
+
+        width: 100%;
+
+        padding: 30px 15px;
+
+        overflow: hidden;
+    }
+
+
+    .privacy-container {
+
+        width: 100%;
+
+        padding: 24px 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .privacy-small-heading {
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .privacy-title {
+
+        font-size: 23px;
+
+        line-height: 1.2;
+
+        margin-bottom: 25px;
+    }
+
+
+    .privacy-block {
+
+        margin-bottom: 18px;
+
+        padding-bottom: 16px;
+    }
+
+
+    .privacy-block h3 {
+
+        font-size: 15px;
+
+        line-height: 1.4;
+
+        margin-bottom: 7px;
+    }
+
+
+    .privacy-block p {
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+}
+
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   400px AND BELOW
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .aboutus {
+        padding: 30px 12px;
+    }
+
+
+    .image1 {
+        height: 210px;
+    }
+
+
+    .header2 {
+        font-size: 22px;
+    }
+
+
+    .header3 {
+        font-size: 17px;
+    }
+
+
+    .text {
+        font-size: 13px;
+    }
+
+
+    .owners-section {
+        padding: 30px 12px;
+    }
+
+
+    .ownercard,
+    .coownercard {
+        padding: 19px;
+    }
+
+
+    .ownerimage,
+    .coownerimage {
+        width: 95px;
+        height: 95px;
+    }
+
+
+    .onwerhead2,
+    .coownerhead2 {
+        font-size: 21px;
+    }
+
+
+    .text1,
+    .text2 {
+        font-size: 13px;
+    }
+
+
+    .privacy-section {
+        padding: 25px 12px;
+    }
+
+
+    .privacy-container {
+        padding: 21px 17px;
+    }
+
+
+    .privacy-title {
+        font-size: 21px;
+    }
+
+
+    .privacy-block h3 {
+        font-size: 14px;
+    }
+
+
+    .privacy-block p {
+        font-size: 12.5px;
+    }
+}

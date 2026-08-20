@@ -189,12 +189,11 @@
 
 }
 
-
 /* =========================
    SUBTYPE COLUMN
 ========================= */
 
-.polyester-content>div:nth-of-type(2) {
+.polyester-subtypes {
 
     position: absolute;
 
@@ -207,21 +206,30 @@
     flex-direction: column;
 
     gap: 10px;
+
+    z-index: 10;
 }
 
 
-/* Subtype buttons */
+/* =========================
+   SUBTYPE BUTTONS
+========================= */
 
-.polyester-content>div:nth-of-type(2) button {
+.polyester-subtypes button {
+
+    display: block;
 
     width: 100%;
 
     padding: 12px 10px;
 
+    box-sizing: border-box;
+
     border: 1px solid rgba(217, 164, 65, 0.6);
+
     border-radius: 7px;
 
-    background: rgba(5, 15, 25, 0.75);
+    background: rgba(5, 15, 25, 0.85);
 
     color: white;
 
@@ -232,15 +240,134 @@
     text-align: left;
 
     transition: 0.2s ease;
+
+    opacity: 1;
+
+    visibility: visible;
 }
 
-.polyester-content>div:nth-of-type(2) button:hover {
+
+.polyester-subtypes button:hover {
 
     background: rgba(217, 164, 65, 0.2);
 
     border-color: #d9a441;
 }
 
+
+/* =========================================================
+   ALL RESPONSIVE CSS
+   KEEP THIS AT THE VERY BOTTOM
+========================================================= */
+
+
+/* =========================
+   TABLET
+   769px - 1200px
+========================= */
+
+@media (max-width: 1200px) {
+
+    .polyester-subtypes {
+
+        top: 80px;
+        right: 250px;
+
+        width: 145px;
+
+        gap: 9px;
+    }
+
+    .polyester-subtypes button {
+
+        padding: 11px 9px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   0px - 768px
+========================= */
+
+@media (max-width: 768px) {
+
+    .polyester-subtypes {
+
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: 100%;
+
+        margin-top: 25px;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        z-index: 20;
+    }
+
+
+    .polyester-subtypes button {
+
+        display: block;
+
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 42px;
+
+        padding: 11px 10px;
+
+        box-sizing: border-box;
+
+        font-size: 12px;
+
+        text-align: center;
+
+        opacity: 1;
+
+        visibility: visible;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   0px - 480px
+========================= */
+
+@media (max-width: 480px) {
+
+    .polyester-subtypes {
+
+        width: 100%;
+
+        margin-top: 20px;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+
+    .polyester-subtypes button {
+
+        min-height: 40px;
+
+        padding: 10px 7px;
+
+        font-size: 11px;
+    }
+}
 
 /* =========================
    SPECIFICATION BOX
@@ -602,4 +729,429 @@
 .specification-buttons>button:last-child:hover {
     background: rgba(217, 164, 65, 0.15);
     color: #d9a441;
+}
+
+/* =========================================================
+   POLYESTER RESPONSIVE
+========================================================= */
+
+
+/* =========================
+   TABLET
+   769px - 1200px
+========================= */
+
+@media (max-width: 1200px) {
+
+    .polyester-section {
+        width: 100%;
+        padding: 25px 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .polyester-card {
+        width: 100%;
+        max-width: 100%;
+        height: 620px;
+        margin: 0 auto;
+
+        overflow: hidden;
+        border-radius: 16px;
+        box-sizing: border-box;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   481px - 768px
+========================= */
+
+@media (max-width: 768px) {
+
+    .polyester-section {
+        width: 100%;
+        padding: 20px 12px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .polyester-card {
+        position: relative;
+
+        width: 100%;
+        max-width: 100%;
+
+        /*
+           Fixed height remove.
+           Content jitna badega,
+           card bhi utna hi badega.
+        */
+        height: auto;
+        min-height: 0;
+
+        margin: 0;
+
+        overflow: hidden;
+        border-radius: 14px;
+
+        box-sizing: border-box;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   0px - 480px
+========================= */
+
+@media (max-width: 480px) {
+
+    .polyester-section {
+        width: 100%;
+        padding: 16px 8px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .polyester-card {
+        width: 100%;
+
+        height: auto;
+        min-height: 0;
+
+        margin: 0;
+
+        border-radius: 12px;
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+}
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+
+.polyester-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.polyester-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(3, 12, 20, 0.45);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .polyester-image {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .polyester-card::after {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.polyester-content {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    padding: 70px;
+
+    box-sizing: border-box;
+
+    color: white;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1200px) {
+
+    .polyester-content {
+        padding: 55px 45px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .polyester-content {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+        height: auto;
+        min-height: 600px;
+
+        padding: 90px 22px 35px;
+
+        box-sizing: border-box;
+
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .polyester-content {
+        min-height: 600px;
+
+        padding: 80px 18px 30px;
+    }
+}
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.polyester-content>button:first-of-type {
+
+    position: absolute;
+
+    left: 70px;
+    bottom: 55px;
+
+    padding: 12px 25px;
+
+    border: 1px solid #d9a441;
+    border-radius: 6px;
+
+    background: #d9a441;
+
+    color: #07111c;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+/* =========================================
+   REQUEST QUOTE WRAPPER
+========================================= */
+
+.polyester-content .requestquote {
+
+    position: absolute;
+
+    left: 245px;
+    bottom: 55px;
+
+    width: auto;
+    margin: 0;
+}
+
+
+/* =========================================
+   REQUEST QUOTE BUTTON
+========================================= */
+
+.polyester-content .requestquote button {
+
+    padding: 12px 25px;
+
+    border: 1px solid #d9a441;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.polyester-content .requestquote button:hover {
+
+    background: #d9a441;
+
+    color: #07111c;
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.polyester-content .requestquote button:active {
+
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .polyester-content>button:first-of-type {
+
+        left: 45px;
+        bottom: 45px;
+    }
+
+    .polyester-content .requestquote {
+
+        left: 205px;
+        bottom: 45px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Explore button */
+
+    .polyester-content>button:first-of-type {
+
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        align-self: flex-start;
+
+        margin-top: 25px;
+
+        padding: 11px 20px;
+
+        font-size: 13px;
+
+        white-space: nowrap;
+    }
+
+
+    /* Request quote wrapper */
+
+    .polyester-content .requestquote {
+
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin-top: 10px;
+    }
+
+
+    /* Request quote button */
+
+    .polyester-content .requestquote button {
+
+        width: auto;
+
+        padding: 11px 20px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .polyester-content>button:first-of-type {
+
+        margin-top: 22px;
+
+        padding: 10px 18px;
+    }
+
+    .polyester-content .requestquote {
+
+        margin-top: 9px;
+    }
+
+    .polyester-content .requestquote button {
+
+        padding: 10px 18px;
+
+        font-size: 12px;
+    }
 }
