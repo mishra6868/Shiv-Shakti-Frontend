@@ -14,6 +14,7 @@
 
     width: 100%;
     max-width: 1200px;
+
     height: 650px;
 
     margin: auto;
@@ -37,10 +38,14 @@
     height: 100%;
 
     object-fit: cover;
+
+    z-index: 0;
 }
 
 
-/* Dark overlay */
+/* =========================================
+   DARK OVERLAY
+========================================= */
 
 .nylon-card::after {
     content: "";
@@ -52,6 +57,8 @@
     background: rgba(3, 12, 20, 0.45);
 
     z-index: 1;
+
+    pointer-events: none;
 }
 
 
@@ -89,7 +96,6 @@
     color: white;
 }
 
-
 .nylon-content h2 {
     margin: 0 0 18px;
 
@@ -97,7 +103,6 @@
 
     color: #d9a441;
 }
-
 
 .nylon-content>p {
     max-width: 520px;
@@ -139,8 +144,9 @@
     cursor: pointer;
 
     transition: 0.2s ease;
-}
 
+    z-index: 10;
+}
 
 .nylon-content>button:first-of-type:hover {
 
@@ -155,25 +161,30 @@
 ========================================= */
 
 .nylon-content .requestquote {
+
     position: absolute;
 
     left: 245px;
+
     bottom: 55px;
 
     z-index: 10;
 }
 
-
 .nylon-content .requestquote button {
+
     padding: 12px 25px;
 
     border: 1px solid #d9a441;
+
     border-radius: 6px;
 
     background: transparent;
+
     color: white;
 
     font-size: 14px;
+
     font-weight: 500;
 
     cursor: pointer;
@@ -181,31 +192,35 @@
     transition: all 0.2s ease;
 }
 
-
 .nylon-content .requestquote button:hover {
+
     background: #d9a441;
+
     color: #07111c;
 }
 
 
-/* Ant Design Modal ke andar ka button
-   is page ke Request Quote button ko affect nahi karega */
+/* Ant Design Modal ke buttons ko
+   page ke Request Quote button se
+   affect nahi hone dena */
 
 .nylon-content .requestquote .ant-modal button {
+
     position: static;
 }
+
 
 /* =========================================
    SUBTYPE COLUMN
 ========================================= */
 
-.nylon-content>div:nth-of-type(2) {
+.subtype-column {
 
     position: absolute;
 
     top: 90px;
 
-    right: 370px;
+    left: 65%;
 
     width: 155px;
 
@@ -214,16 +229,26 @@
     flex-direction: column;
 
     gap: 10px;
+
+    z-index: 20;
+
+    box-sizing: border-box;
 }
 
 
-/* Subtype buttons */
+/* =========================================
+   SUBTYPE BUTTONS
+========================================= */
 
-.nylon-content>div:nth-of-type(2) button {
+.subtype-column button {
+
+    display: block;
 
     width: 100%;
 
     padding: 12px 10px;
+
+    box-sizing: border-box;
 
     border: 1px solid rgba(217, 164, 65, 0.6);
 
@@ -242,12 +267,16 @@
     transition: 0.2s ease;
 }
 
-
-.nylon-content>div:nth-of-type(2) button:hover {
+.subtype-column button:hover {
 
     background: rgba(217, 164, 65, 0.2);
 
     border-color: #d9a441;
+}
+
+.subtype-column button:active {
+
+    transform: scale(0.98);
 }
 
 
@@ -255,7 +284,7 @@
    SPECIFICATION BOX
 ========================================= */
 
-.nylon-content>div:nth-of-type(3) {
+.specification {
 
     position: absolute;
 
@@ -282,18 +311,21 @@
     overflow-y: auto;
 
     overflow-x: hidden;
+
+    z-index: 15;
 }
 
 
-/* Specification scrollbar */
+/* =========================================
+   SPECIFICATION SCROLLBAR
+========================================= */
 
-.nylon-content>div:nth-of-type(3)::-webkit-scrollbar {
+.specification::-webkit-scrollbar {
 
     width: 4px;
 }
 
-
-.nylon-content>div:nth-of-type(3)::-webkit-scrollbar-thumb {
+.specification::-webkit-scrollbar-thumb {
 
     background: #d9a441;
 
@@ -312,7 +344,6 @@
     margin-bottom: 12px;
 }
 
-
 .nylon-content .fabric-mini img {
 
     width: 100%;
@@ -325,7 +356,6 @@
 
     display: block;
 }
-
 
 .nylon-content .fabric-mini h2 {
 
@@ -348,7 +378,6 @@
     padding-top: 10px;
 }
 
-
 .nylon-content .specification-details h2 {
 
     margin: 0 0 9px;
@@ -359,7 +388,6 @@
 
     text-transform: uppercase;
 }
-
 
 .nylon-content .specification-details p {
 
@@ -384,7 +412,6 @@
     border-top: 1px solid rgba(217, 164, 65, 0.35);
 }
 
-
 .nylon-content .available-colors h2 {
 
     margin: 0 0 9px;
@@ -395,7 +422,6 @@
 
     text-transform: uppercase;
 }
-
 
 .nylon-content .available-colors span {
 
@@ -428,7 +454,6 @@
     border-top: 1px solid rgba(217, 164, 65, 0.35);
 }
 
-
 .nylon-content .garment-section h2 {
 
     margin: 0 0 9px;
@@ -440,7 +465,6 @@
     text-transform: uppercase;
 }
 
-
 .nylon-content .garment-list {
 
     display: flex;
@@ -450,18 +474,15 @@
     overflow-x: auto;
 }
 
-
 .nylon-content .garment-list::-webkit-scrollbar {
 
     height: 3px;
 }
 
-
 .nylon-content .garment-list::-webkit-scrollbar-thumb {
 
     background: #d9a441;
 }
-
 
 .nylon-content .garment-list>div {
 
@@ -469,7 +490,6 @@
 
     text-align: center;
 }
-
 
 .nylon-content .garment-list img {
 
@@ -481,7 +501,6 @@
 
     border-radius: 6px;
 }
-
 
 .nylon-content .garment-list p {
 
@@ -506,7 +525,6 @@
     border-top: 1px solid rgba(217, 164, 65, 0.35);
 }
 
-
 .nylon-content .fabric-applications h2 {
 
     margin: 0 0 9px;
@@ -518,7 +536,6 @@
     text-transform: uppercase;
 }
 
-
 .nylon-content .application-list {
 
     display: flex;
@@ -527,7 +544,6 @@
 
     gap: 5px;
 }
-
 
 .nylon-content .application-item {
 
@@ -544,12 +560,10 @@
     background: rgba(255, 255, 255, 0.02);
 }
 
-
 .nylon-content .application-icon {
 
     font-size: 17px;
 }
-
 
 .nylon-content .application-item p {
 
@@ -574,7 +588,6 @@
     border-top: 1px solid rgba(217, 164, 65, 0.35);
 }
 
-
 .nylon-content .manufacturing-process h2 {
 
     margin: 0 0 9px;
@@ -585,7 +598,6 @@
 
     text-transform: uppercase;
 }
-
 
 .nylon-content .process-list {
 
@@ -598,12 +610,10 @@
     gap: 3px;
 }
 
-
 .nylon-content .process-item {
 
     text-align: center;
 }
-
 
 .nylon-content .process-icon {
 
@@ -624,7 +634,6 @@
     font-size: 13px;
 }
 
-
 .nylon-content .process-item p {
 
     margin: 3px 0;
@@ -634,7 +643,6 @@
     color: white;
 }
 
-
 .nylon-content .process-list>span {
 
     color: #d9a441;
@@ -642,14 +650,20 @@
     font-size: 11px;
 }
 
+
 /* =========================================
-   REQUEST QUOTE + DOWNLOAD BUTTONS
+   SPECIFICATION BOTTOM BUTTONS
 ========================================= */
 
 .nylon-content .specification-buttons {
+
     display: flex;
+
     gap: 8px;
+
     width: 100%;
+
+    margin-top: 15px;
 }
 
 
@@ -658,14 +672,19 @@
 ========================================= */
 
 .nylon-content .specification-buttons .requestquote {
+
     position: static;
 
     flex: 1;
+
     width: 100%;
+
     margin: 0;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
@@ -675,21 +694,27 @@
 ========================================= */
 
 .nylon-content .specification-buttons .requestquote .ant-btn {
+
     width: 100%;
+
     height: 36px;
 
     padding: 0 5px;
 
     border: 1px solid #d9a441;
+
     border-radius: 6px;
 
     background: #d9a441;
+
     color: #07111c;
 
     font-size: 10px;
+
     font-family: Arial, sans-serif;
 
     box-shadow: none;
+
     cursor: pointer;
 
     transition: 0.25s ease;
@@ -701,8 +726,11 @@
 ========================================= */
 
 .nylon-content .specification-buttons .requestquote .ant-btn:hover {
+
     background: transparent !important;
+
     color: white !important;
+
     border-color: #d9a441 !important;
 }
 
@@ -712,19 +740,25 @@
 ========================================= */
 
 .nylon-content .specification-buttons>button:last-child {
+
     flex: 1;
+
     width: 100%;
+
     height: 36px;
 
     padding: 0 5px;
 
     border: 1px solid #d9a441;
+
     border-radius: 6px;
 
     background: #d9a441;
+
     color: #07111c;
 
     font-size: 10px;
+
     font-family: Arial, sans-serif;
 
     cursor: pointer;
@@ -738,7 +772,10 @@
 ========================================= */
 
 .nylon-content .specification-buttons>button:last-child:hover {
+
     background: transparent;
+
     color: white;
+
     border-color: #d9a441;
 }

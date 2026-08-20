@@ -11,11 +11,16 @@
 
 .polyester-card {
     position: relative;
+
     width: 100%;
     max-width: 1200px;
+
     height: 650px;
+
     margin: auto;
+
     overflow: hidden;
+
     border-radius: 18px;
 }
 
@@ -26,26 +31,34 @@
 
 .polyester-image {
     position: absolute;
+
     inset: 0;
 
     width: 100%;
     height: 100%;
 
     object-fit: cover;
+
+    z-index: 0;
 }
 
 
-/* Dark overlay */
+/* =========================
+   DARK OVERLAY
+========================= */
 
 .polyester-card::after {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background: rgba(3, 12, 20, 0.45);
 
     z-index: 1;
+
+    pointer-events: none;
 }
 
 
@@ -55,8 +68,10 @@
 
 .polyester-content {
     position: relative;
+
     z-index: 2;
 
+    width: 100%;
     height: 100%;
 
     padding: 70px;
@@ -75,6 +90,7 @@
     margin: 0 0 12px;
 
     font-size: 46px;
+
     font-weight: 700;
 }
 
@@ -92,6 +108,7 @@
     margin: 0 0 15px;
 
     font-size: 16px;
+
     line-height: 1.6;
 }
 
@@ -110,6 +127,7 @@
     padding: 12px 25px;
 
     border: 1px solid #d9a441;
+
     border-radius: 6px;
 
     background: #d9a441;
@@ -119,12 +137,80 @@
     cursor: pointer;
 
     font-size: 14px;
+
+    z-index: 10;
 }
 
 
-/* =========================================
+/* =========================
+   SLIDER PREVIOUS BUTTON
+========================= */
+
+.fabric-prev {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 58px;
+    height: 58px;
+
+    border: 1px solid #d9a441;
+
+    border-radius: 50%;
+
+    background: rgba(3, 13, 23, 0.35);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   SLIDER NEXT BUTTON
+========================= */
+
+.fabric-next {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 58px;
+    height: 58px;
+
+    border: 1px solid #d9a441;
+
+    border-radius: 50%;
+
+    background: rgba(3, 13, 23, 0.35);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+
+/* =========================
    REQUEST QUOTE
-========================================= */
+========================= */
 
 .polyester-content .requestquote {
 
@@ -137,12 +223,14 @@
     width: auto;
 
     margin: 0;
+
+    z-index: 10;
 }
 
 
-/* =========================================
+/* =========================
    REQUEST QUOTE BUTTON
-========================================= */
+========================= */
 
 .polyester-content .requestquote button {
 
@@ -166,59 +254,79 @@
 }
 
 
-/* =========================================
-   HOVER
-========================================= */
+/* =========================
+   REQUEST QUOTE HOVER
+========================= */
 
 .polyester-content .requestquote button:hover {
 
     background: #d9a441;
 
     color: #07111c;
-
-}
-
-
-/* =========================================
-   ACTIVE
-========================================= */
-
-.polyester-content .requestquote button:active {
-
-    transform: scale(0.97);
-
 }
 
 
 /* =========================
-   SUBTYPE COLUMN
+   REQUEST QUOTE ACTIVE
 ========================= */
 
-.polyester-content>div:nth-of-type(2) {
+.polyester-content .requestquote button:active {
+
+    transform: scale(0.97);
+}
+
+
+/* ==================================================
+   SUBTYPE COLUMN
+================================================== */
+
+.subtype-column {
 
     position: absolute;
 
+    /*
+       Percentage based positioning instead of
+       right: 370px.
+
+       This keeps the column inside the card
+       on different screen widths without using
+       media queries.
+    */
+
+    left: 65%;
+
+    right: auto;
+
     top: 90px;
-    right: 370px;
 
     width: 155px;
 
     display: flex;
+
     flex-direction: column;
 
     gap: 10px;
+
+    z-index: 20;
 }
 
 
-/* Subtype buttons */
+/* =========================
+   SUBTYPE BUTTON
+========================= */
 
-.polyester-content>div:nth-of-type(2) button {
+.subtype-column button {
+
+    display: block;
 
     width: 100%;
 
     padding: 12px 10px;
 
+    box-sizing: border-box;
+
     border: 1px solid rgba(217, 164, 65, 0.6);
+
     border-radius: 7px;
 
     background: rgba(5, 15, 25, 0.75);
@@ -234,7 +342,12 @@
     transition: 0.2s ease;
 }
 
-.polyester-content>div:nth-of-type(2) button:hover {
+
+/* =========================
+   SUBTYPE HOVER
+========================= */
+
+.subtype-column button:hover {
 
     background: rgba(217, 164, 65, 0.2);
 
@@ -243,17 +356,29 @@
 
 
 /* =========================
-   SPECIFICATION BOX
+   SUBTYPE ACTIVE
 ========================= */
 
-.polyester-content>div:nth-of-type(3) {
+.subtype-column button:active {
+
+    transform: scale(0.98);
+}
+
+
+/* ==================================================
+   SPECIFICATION BOX
+================================================== */
+
+.specification {
 
     position: absolute;
 
     top: 25px;
+
     right: 25px;
 
     width: 325px;
+
     height: 600px;
 
     padding: 16px;
@@ -261,6 +386,7 @@
     box-sizing: border-box;
 
     border: 1px solid rgba(217, 164, 65, 0.6);
+
     border-radius: 14px;
 
     background: rgba(3, 13, 23, 0.92);
@@ -268,18 +394,26 @@
     color: white;
 
     overflow-y: auto;
+
     overflow-x: hidden;
+
+    z-index: 15;
 }
 
 
-/* Specification scrollbar */
+/* =========================
+   SPECIFICATION SCROLLBAR
+========================= */
 
-.polyester-content>div:nth-of-type(3)::-webkit-scrollbar {
+.specification::-webkit-scrollbar {
+
     width: 4px;
 }
 
-.polyester-content>div:nth-of-type(3)::-webkit-scrollbar-thumb {
+.specification::-webkit-scrollbar-thumb {
+
     background: #d9a441;
+
     border-radius: 10px;
 }
 
@@ -291,6 +425,7 @@
 .fabric-mini img {
 
     width: 100%;
+
     height: 95px;
 
     object-fit: cover;
@@ -309,7 +444,7 @@
 
 
 /* =========================
-   SPECIFICATION
+   SPECIFICATION DETAILS
 ========================= */
 
 .specification-details {
@@ -343,7 +478,7 @@
 
 
 /* =========================
-   COLORS
+   AVAILABLE COLORS
 ========================= */
 
 .available-colors {
@@ -403,6 +538,7 @@
 .garment-list img {
 
     width: 55px;
+
     height: 55px;
 
     object-fit: cover;
@@ -467,7 +603,7 @@
 
 
 /* =========================
-   MANUFACTURING
+   MANUFACTURING PROCESS
 ========================= */
 
 .manufacturing-process {
@@ -498,11 +634,13 @@
 .process-icon {
 
     width: 28px;
+
     height: 28px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border: 1px solid #d9a441;
@@ -526,80 +664,122 @@
     font-size: 11px;
 }
 
-/* =========================
+
+/* ==================================================
    SPECIFICATION BOTTOM BUTTONS
-========================= */
+================================================== */
 
 .specification-buttons {
+
     display: flex;
+
     gap: 8px;
+
     width: 100%;
+
     margin-top: 15px;
+
     align-items: stretch;
 }
 
-/* Request Quote wrapper */
+
+/* =========================
+   REQUEST QUOTE WRAPPER
+========================= */
 
 .specification-buttons .requestquote {
+
     flex: 1;
+
     margin: 0;
+
     position: static;
 }
 
-/* Request Quote button */
+
+/* =========================
+   REQUEST QUOTE BUTTON
+========================= */
 
 .specification-buttons .requestquote button {
+
     width: 100%;
+
     height: 100%;
 
     padding: 10px 6px;
 
     border: 1px solid #d9a441;
+
     border-radius: 6px;
 
     background: #d9a441;
+
     color: #07111c;
 
     font-size: 10px;
+
     cursor: pointer;
 
     transition: 0.25s ease;
 }
 
-/* Request Quote hover */
+
+/* =========================
+   REQUEST QUOTE HOVER
+========================= */
 
 .specification-buttons .requestquote button:hover {
+
     background: #e7b653;
 }
 
-/* Link inside Request Quote */
+
+/* =========================
+   REQUEST QUOTE LINK
+========================= */
 
 .specification-buttons .requestquote a {
+
     color: #07111c;
+
     text-decoration: none;
 }
 
 
-/* Download Specification */
+/* =========================
+   DOWNLOAD SPECIFICATION
+========================= */
 
 .specification-buttons>button:last-child {
+
     flex: 1;
 
     padding: 10px 6px;
 
     border: 1px solid #d9a441;
+
     border-radius: 6px;
 
     background: transparent;
+
     color: white;
 
     font-size: 10px;
+
     cursor: pointer;
 
     transition: 0.25s ease;
 }
 
+
+/* =========================
+   DOWNLOAD HOVER
+========================= */
+
 .specification-buttons>button:last-child:hover {
+
     background: rgba(217, 164, 65, 0.15);
+
     color: #d9a441;
 }

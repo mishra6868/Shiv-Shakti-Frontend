@@ -4,23 +4,35 @@ function Subtype({ setsubtype }) {
 
   let [subtypes, setSubtypes] = useState([]);
 
-  let getData = async () => {
-
-    let response = await fetch(
-      `${process.env.REACT_APP_API_URI}/api/user/subtypes?name=Polyester`
-    );
-
-    let data = await response.json();
-
-    setSubtypes(data);
-  };
-
   useEffect(() => {
+
+    let getData = async () => {
+
+      try {
+
+        let response = await fetch(
+          `${process.env.REACT_APP_API_URI}/api/user/subtypes?name=Polyester`
+        );
+
+        let data = await response.json();
+
+        setSubtypes(data);
+
+      } catch (error) {
+
+        console.log("Subtype error:", error);
+
+      }
+
+    };
+
     getData();
+
   }, []);
 
   return (
-    <div>
+    <div className="subtype-column">
+
       {subtypes.map((item) => (
 
         <button
@@ -31,6 +43,7 @@ function Subtype({ setsubtype }) {
         </button>
 
       ))}
+
     </div>
   );
 }

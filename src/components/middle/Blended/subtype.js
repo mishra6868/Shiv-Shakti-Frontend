@@ -6,33 +6,39 @@ function Subtypes({ setsubtype }) {
 
   let [subtypes, setSubtypes] = useState([]);
 
-  let getData = async () => {
-
-    try {
-
-      let response = await fetch(
-        `${process.env.REACT_APP_API_URI}/api/user/subtypes?name=Blended%20Fabrics`
-      );
-
-      let data = await response.json();
-
-      setSubtypes(data);
-
-    } catch (error) {
-
-      console.log("Blended subtype error:", error);
-
-    }
-
-  };
-
   useEffect(() => {
+
+    let getData = async () => {
+
+      try {
+
+        let response = await fetch(
+          `${process.env.REACT_APP_API_URI}/api/user/subtypes?name=Blended%20Fabrics`
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch Blended subtypes");
+        }
+
+        let data = await response.json();
+
+        setSubtypes(data);
+
+      } catch (error) {
+
+        console.log("Blended subtype error:", error);
+
+      }
+
+    };
+
     getData();
+
   }, []);
 
   return (
 
-    <div>
+    <div className="subtype-column">
 
       {subtypes.map((item) => (
 
@@ -48,7 +54,6 @@ function Subtypes({ setsubtype }) {
     </div>
 
   );
-
 }
 
-export default Subtypes;
+export default Subtypes; 

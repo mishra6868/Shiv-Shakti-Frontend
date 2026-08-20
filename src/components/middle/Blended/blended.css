@@ -14,6 +14,7 @@
 
     width: 100%;
     max-width: 1200px;
+
     height: 650px;
 
     margin: auto;
@@ -37,10 +38,14 @@
     height: 100%;
 
     object-fit: cover;
+
+    z-index: 0;
 }
 
 
-/* Dark overlay */
+/* =========================================
+   DARK OVERLAY
+========================================= */
 
 .blended-card::after {
     content: "";
@@ -52,6 +57,8 @@
     background: rgba(3, 12, 20, 0.45);
 
     z-index: 1;
+
+    pointer-events: none;
 }
 
 
@@ -89,7 +96,6 @@
     color: white;
 }
 
-
 .blended-content h2 {
     margin: 0 0 18px;
 
@@ -97,7 +103,6 @@
 
     color: #d9a441;
 }
-
 
 .blended-content>p {
     max-width: 520px;
@@ -121,6 +126,7 @@
     position: absolute;
 
     left: 70px;
+
     bottom: 55px;
 
     padding: 12px 25px;
@@ -136,8 +142,11 @@
     font-size: 14px;
 
     cursor: pointer;
-}
 
+    transition: 0.2s ease;
+
+    z-index: 20;
+}
 
 .blended-content>button:first-of-type:hover {
 
@@ -162,6 +171,8 @@
     width: auto;
 
     margin: 0;
+
+    z-index: 20;
 }
 
 
@@ -192,7 +203,7 @@
 
 
 /* =========================================
-   HOVER
+   REQUEST QUOTE HOVER
 ========================================= */
 
 .blended-content .requestquote button:hover {
@@ -200,25 +211,24 @@
     background: #d9a441;
 
     color: #07111c;
-
 }
 
 
 /* =========================================
-   ACTIVE
+   REQUEST QUOTE ACTIVE
 ========================================= */
 
 .blended-content .requestquote button:active {
 
     transform: scale(0.97);
-
 }
+
 
 /* =========================================
    SUBTYPE COLUMN
 ========================================= */
 
-.blended-content>div:nth-of-type(2) {
+.blended-content .subtype-column {
 
     position: absolute;
 
@@ -233,16 +243,26 @@
     flex-direction: column;
 
     gap: 10px;
+
+    box-sizing: border-box;
+
+    z-index: 20;
 }
 
 
-/* Subtype buttons */
+/* =========================================
+   SUBTYPE BUTTONS
+========================================= */
 
-.blended-content>div:nth-of-type(2) button {
+.blended-content .subtype-column button {
+
+    display: block;
 
     width: 100%;
 
     padding: 12px 10px;
+
+    box-sizing: border-box;
 
     border: 1px solid rgba(217, 164, 65, 0.6);
 
@@ -261,12 +281,16 @@
     transition: 0.2s ease;
 }
 
-
-.blended-content>div:nth-of-type(2) button:hover {
+.blended-content .subtype-column button:hover {
 
     background: rgba(217, 164, 65, 0.2);
 
     border-color: #d9a441;
+}
+
+.blended-content .subtype-column button:active {
+
+    transform: scale(0.98);
 }
 
 
@@ -274,7 +298,7 @@
    SPECIFICATION BOX
 ========================================= */
 
-.blended-content>div:nth-of-type(3) {
+.blended-content .specification {
 
     position: absolute;
 
@@ -301,28 +325,42 @@
     overflow-y: auto;
 
     overflow-x: hidden;
+
+    z-index: 15;
 }
 
 
-/* Specification scrollbar */
+/* =========================================
+   SPECIFICATION SCROLLBAR
+========================================= */
 
-.blended-content>div:nth-of-type(3)::-webkit-scrollbar {
+.blended-content .specification::-webkit-scrollbar {
+
     width: 4px;
 }
 
-.blended-content>div:nth-of-type(3)::-webkit-scrollbar-thumb {
+.blended-content .specification::-webkit-scrollbar-thumb {
+
     background: #d9a441;
 
     border-radius: 10px;
 }
 
 
-
 /* =========================================
    MINI BLENDED IMAGE
 ========================================= */
 
+.blended-content .fabric-mini {
+
+    width: 100%;
+
+    margin-bottom: 12px;
+}
+
 .blended-content .fabric-mini img {
+
+    display: block;
 
     width: 100%;
 
@@ -332,7 +370,6 @@
 
     border-radius: 8px;
 }
-
 
 .blended-content .fabric-mini h2 {
 
@@ -355,12 +392,7 @@
     padding-top: 10px;
 }
 
-
-.blended-content .specification-details h2,
-.blended-content .available-colors h2,
-.blended-content .garment-section h2,
-.blended-content .fabric-applications h2,
-.blended-content .manufacturing-process h2 {
+.blended-content .specification-details h2 {
 
     margin: 0 0 9px;
 
@@ -371,12 +403,13 @@
     text-transform: uppercase;
 }
 
-
 .blended-content .specification-details p {
 
     margin: 5px 0;
 
     font-size: 12px;
+
+    color: rgba(255, 255, 255, 0.9);
 }
 
 
@@ -393,6 +426,16 @@
     border-top: 1px solid rgba(217, 164, 65, 0.35);
 }
 
+.blended-content .available-colors h2 {
+
+    margin: 0 0 9px;
+
+    font-size: 13px;
+
+    color: #d9a441;
+
+    text-transform: uppercase;
+}
 
 .blended-content .available-colors span {
 
@@ -407,6 +450,8 @@
     border-radius: 15px;
 
     font-size: 10px;
+
+    color: white;
 }
 
 
@@ -423,6 +468,16 @@
     border-top: 1px solid rgba(217, 164, 65, 0.35);
 }
 
+.blended-content .garment-section h2 {
+
+    margin: 0 0 9px;
+
+    font-size: 13px;
+
+    color: #d9a441;
+
+    text-transform: uppercase;
+}
 
 .blended-content .garment-list {
 
@@ -433,6 +488,17 @@
     overflow-x: auto;
 }
 
+.blended-content .garment-list::-webkit-scrollbar {
+
+    height: 3px;
+}
+
+.blended-content .garment-list::-webkit-scrollbar-thumb {
+
+    background: #d9a441;
+
+    border-radius: 10px;
+}
 
 .blended-content .garment-list>div {
 
@@ -440,7 +506,6 @@
 
     text-align: center;
 }
-
 
 .blended-content .garment-list img {
 
@@ -453,12 +518,13 @@
     border-radius: 6px;
 }
 
-
 .blended-content .garment-list p {
 
     margin: 3px 0;
 
     font-size: 9px;
+
+    color: white;
 }
 
 
@@ -475,6 +541,16 @@
     border-top: 1px solid rgba(217, 164, 65, 0.35);
 }
 
+.blended-content .fabric-applications h2 {
+
+    margin: 0 0 9px;
+
+    font-size: 13px;
+
+    color: #d9a441;
+
+    text-transform: uppercase;
+}
 
 .blended-content .application-list {
 
@@ -484,7 +560,6 @@
 
     gap: 5px;
 }
-
 
 .blended-content .application-item {
 
@@ -497,20 +572,22 @@
     border: 1px solid rgba(217, 164, 65, 0.35);
 
     border-radius: 6px;
-}
 
+    background: rgba(255, 255, 255, 0.02);
+}
 
 .blended-content .application-icon {
 
     font-size: 17px;
 }
 
-
 .blended-content .application-item p {
 
     margin: 3px 0 0;
 
     font-size: 8px;
+
+    color: white;
 }
 
 
@@ -527,6 +604,16 @@
     border-top: 1px solid rgba(217, 164, 65, 0.35);
 }
 
+.blended-content .manufacturing-process h2 {
+
+    margin: 0 0 9px;
+
+    font-size: 13px;
+
+    color: #d9a441;
+
+    text-transform: uppercase;
+}
 
 .blended-content .process-list {
 
@@ -539,12 +626,10 @@
     gap: 3px;
 }
 
-
 .blended-content .process-item {
 
     text-align: center;
 }
-
 
 .blended-content .process-icon {
 
@@ -565,14 +650,14 @@
     font-size: 13px;
 }
 
-
 .blended-content .process-item p {
 
     margin: 3px 0;
 
     font-size: 7px;
-}
 
+    color: white;
+}
 
 .blended-content .process-list>span {
 
@@ -580,6 +665,7 @@
 
     font-size: 11px;
 }
+
 
 /* =========================================
    SPECIFICATION BOTTOM BUTTONS
@@ -594,20 +680,44 @@
     margin-top: 15px;
 
     width: 100%;
+
+    align-items: stretch;
 }
 
 
 /* =========================================
-   BOTH BUTTONS
+   REQUEST QUOTE WRAPPER
 ========================================= */
 
-.blended-content .specification-buttons>button {
+.blended-content .specification-buttons .requestquote {
+
+    position: static;
 
     flex: 1;
 
-    min-width: 0;
+    width: 100%;
 
-    padding: 9px 5px;
+    height: auto;
+
+    margin: 0;
+
+    display: flex;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   REQUEST QUOTE BUTTON
+========================================= */
+
+.blended-content .specification-buttons .requestquote button {
+
+    width: 100%;
+
+    height: 36px;
+
+    padding: 0 5px;
 
     border: 1px solid #d9a441;
 
@@ -622,80 +732,17 @@
     cursor: pointer;
 
     transition: 0.25s ease;
+
+    box-sizing: border-box;
 }
-
-
-/* =========================================
-   REQUEST QUOTE BUTTON
-========================================= */
-
-.blended-content .specification-buttons>button:first-child {
-
-    padding: 0;
-
-    overflow: hidden;
-
-    background: #d9a441;
-}
-
-
-/* Request Quote wrapper */
-
-.blended-content .specification-buttons .requestquote {
-
-    position: static;
-
-    width: 100%;
-
-    height: 100%;
-}
-
-
-/* Actual Request Quote button */
-
-.blended-content .specification-buttons .requestquote button {
-
-    width: 100%;
-
-    padding: 9px 5px;
-
-    border: none;
-
-    border-radius: 6px;
-
-    background: #d9a441;
-
-    color: #07111c;
-
-    font-size: 10px;
-
-    cursor: pointer;
-
-    transition: 0.25s ease;
-}
-
-
-/* Request Quote hover */
 
 .blended-content .specification-buttons .requestquote button:hover {
 
-    background: transparent;
+    background: transparent !important;
 
-    color: white;
-}
+    color: white !important;
 
-
-/* Request Quote link */
-
-.blended-content .specification-buttons .requestquote a {
-
-    display: block;
-
-    width: 100%;
-
-    color: inherit;
-
-    text-decoration: none;
+    border-color: #d9a441 !important;
 }
 
 
@@ -705,13 +752,30 @@
 
 .blended-content .specification-buttons>button:last-child {
 
+    flex: 1;
+
+    width: 100%;
+
+    height: 36px;
+
+    padding: 0 5px;
+
+    border: 1px solid #d9a441;
+
+    border-radius: 6px;
+
     background: transparent;
 
     color: white;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    box-sizing: border-box;
 }
-
-
-/* Download hover */
 
 .blended-content .specification-buttons>button:last-child:hover {
 
@@ -719,6 +783,7 @@
 
     color: #07111c;
 }
+
 
 /* =========================================
    SLIDER ARROWS
