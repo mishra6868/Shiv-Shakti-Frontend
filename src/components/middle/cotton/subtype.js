@@ -32,7 +32,7 @@ function Subtypes({ setsubtype }) {
 
   return (
 
-    <div>
+    <div className="cotton-subtypes">
 
       {subtypes.map((item) => (
 

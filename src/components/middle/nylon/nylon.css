@@ -742,3 +742,541 @@
     color: white;
     border-color: #d9a441;
 }
+
+/* =========================================
+   NYLON RESPONSIVE
+========================================= */
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nylon-section {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .nylon-card {
+
+        width: 100%;
+
+        height: 600px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .nylon-content {
+
+        padding: 50px 40px;
+
+    }
+
+
+    .nylon-content h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .nylon-content h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .nylon-content>p {
+
+        max-width: 480px;
+
+        font-size: 15px;
+
+    }
+
+
+    /* SUBTYPE */
+
+    .nylon-content>div:nth-of-type(2) {
+
+        right: 250px;
+
+        width: 145px;
+
+    }
+
+
+    /* SPECIFICATION */
+
+    .nylon-content>div:nth-of-type(3) {
+
+        width: 290px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+
+    /* =====================================
+       NYLON SECTION
+    ===================================== */
+
+    .nylon-section {
+
+        width: 100%;
+
+        padding: 20px 12px;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+
+    }
+
+
+    /* =====================================
+       NYLON CARD
+    ===================================== */
+
+    .nylon-card {
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 650px;
+
+        margin: 0 auto;
+
+        border-radius: 14px;
+
+        overflow: visible;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =====================================
+       BACKGROUND IMAGE
+    ===================================== */
+
+    .nylon-image {
+
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+    }
+
+
+    /* =====================================
+       MAIN CONTENT
+    ===================================== */
+
+    .nylon-content {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 650px;
+
+        padding: 45px 22px 30px;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+
+    }
+
+
+    /* =====================================
+       HEADING
+    ===================================== */
+
+    .nylon-content h1 {
+
+        margin: 0 0 8px;
+
+        font-size: 30px;
+
+        line-height: 1.15;
+
+    }
+
+
+    .nylon-content h2 {
+
+        margin: 0 0 14px;
+
+        font-size: 18px;
+
+        line-height: 1.3;
+
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .nylon-content>p {
+
+        max-width: 100%;
+
+        margin: 0 0 12px;
+
+        font-size: 13px;
+
+        line-height: 1.55;
+
+    }
+
+
+    /* =====================================
+       OUTER BUTTONS
+       Explore + Request Quote
+    ===================================== */
+
+    .nylon-content>button:first-of-type {
+
+        position: static;
+
+        display: inline-block;
+
+        margin-top: 15px;
+
+        margin-right: 7px;
+
+        padding: 10px 18px;
+
+        font-size: 12px;
+
+    }
+
+
+    .nylon-content .requestquote {
+
+        position: static;
+
+        display: inline-block;
+
+        margin-top: 15px;
+
+    }
+
+
+    .nylon-content .requestquote button {
+
+        padding: 10px 18px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* =====================================
+       SUBTYPE BUTTONS
+       MOBILE = ROW
+    ===================================== */
+
+    .nylon-content>div:nth-of-type(2) {
+
+        position: static;
+
+        width: 100%;
+
+        margin-top: 22px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        box-sizing: border-box;
+
+    }
+
+
+    .nylon-content>div:nth-of-type(2) button {
+
+        width: auto;
+
+        flex: 1 1 calc(50% - 8px);
+
+        min-width: 0;
+
+        padding: 10px 9px;
+
+        font-size: 11px;
+
+        text-align: left;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =====================================
+       SPECIFICATION BOX
+       MOBILE = NORMAL FLOW
+    ===================================== */
+
+    .nylon-content>div:nth-of-type(3) {
+
+        position: static;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        margin-top: 22px;
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+        margin-bottom: 0;
+
+        padding: 14px;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+
+        border-radius: 12px;
+
+    }
+
+
+    /* =====================================
+       SPECIFICATION SCROLLBAR
+    ===================================== */
+
+    .nylon-content>div:nth-of-type(3)::-webkit-scrollbar {
+
+        width: 4px;
+
+    }
+
+
+    /* =====================================
+       MINI IMAGE
+       KEEP INTERNAL CONTENT SAME
+    ===================================== */
+
+    .nylon-content .fabric-mini img {
+
+        width: 100%;
+
+        height: 95px;
+
+        object-fit: cover;
+
+    }
+
+
+    /* =====================================
+       SPECIFICATION BUTTONS
+    ===================================== */
+
+    .nylon-content .specification-buttons {
+
+        width: 100%;
+
+        display: flex;
+
+        gap: 7px;
+
+        margin-top: 15px;
+
+    }
+
+
+    .nylon-content .specification-buttons .requestquote {
+
+        position: static;
+
+        flex: 1;
+
+        width: 100%;
+
+        margin: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+    .nylon-content .specification-buttons .requestquote .ant-btn {
+
+        width: 100%;
+
+        height: 36px;
+
+        padding: 0 5px;
+
+        font-size: 10px;
+
+        box-sizing: border-box;
+
+    }
+
+
+    .nylon-content .specification-buttons>button:last-child {
+
+        flex: 1;
+
+        width: 100%;
+
+        height: 36px;
+
+        padding: 0 5px;
+
+        font-size: 10px;
+
+        box-sizing: border-box;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+
+    .nylon-section {
+
+        padding: 15px 10px;
+
+    }
+
+
+    .nylon-card {
+
+        border-radius: 12px;
+
+    }
+
+
+    .nylon-content {
+
+        padding: 35px 17px 25px;
+
+    }
+
+
+    .nylon-content h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .nylon-content h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .nylon-content>p {
+
+        font-size: 12px;
+
+        line-height: 1.5;
+
+    }
+
+
+    /* Outer buttons */
+
+    .nylon-content>button:first-of-type {
+
+        padding: 9px 15px;
+
+        font-size: 11px;
+
+    }
+
+
+    .nylon-content .requestquote button {
+
+        padding: 9px 15px;
+
+        font-size: 11px;
+
+    }
+
+
+    /* Subtypes */
+
+    .nylon-content>div:nth-of-type(2) {
+
+        gap: 7px;
+
+        margin-top: 20px;
+
+    }
+
+
+    .nylon-content>div:nth-of-type(2) button {
+
+        flex: 1 1 calc(50% - 7px);
+
+        padding: 9px 8px;
+
+        font-size: 10px;
+
+    }
+
+
+    /* Specification */
+
+    .nylon-content>div:nth-of-type(3) {
+
+        margin-top: 20px;
+
+        padding: 12px;
+
+    }
+
+}

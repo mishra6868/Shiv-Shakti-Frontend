@@ -3,6 +3,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    touch-action: pan-y;
 }
 
 .fabric-slider-track {
@@ -61,4 +62,79 @@
     background: #d9a441;
     color: #07111c;
     box-shadow: 0 0 15px rgba(217, 164, 65, 0.5);
+}
+
+/* =========================================
+   MOBILE FABRIC SLIDER
+   HIDE ARROWS - USE SWIPE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .fabric-prev,
+    .fabric-next {
+        display: none;
+    }
+
+}
+
+/* =========================================
+   MOBILE SLIDE DOTS
+========================================= */
+
+.fabric-slide-dots {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .fabric-slide-dots {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 8px;
+
+        margin-top: 10px;
+
+        padding-bottom: 10px;
+
+    }
+
+
+    .fabric-slide-dots span {
+
+        width: 7px;
+
+        height: 7px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.4);
+
+        transition: all 0.25s ease;
+
+    }
+
+
+    .fabric-slide-dots span.active {
+
+        width: 9px;
+
+        height: 9px;
+
+        background: #d9a441;
+
+    }
+
 }

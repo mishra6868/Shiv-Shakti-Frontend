@@ -217,7 +217,7 @@
 
 
 /* =========================================
-   SUBTYPE COLUMN
+   SUBTYPE COLUMN - DESKTOP
 ========================================= */
 
 .cotton-content>div:nth-of-type(2) {
@@ -225,26 +225,30 @@
     position: absolute;
 
     top: 90px;
-
     right: 370px;
 
     width: 155px;
 
     display: flex;
-
     flex-direction: column;
 
     gap: 10px;
+
+    box-sizing: border-box;
 }
 
 
-/* Subtype buttons */
+/* =========================================
+   SUBTYPE BUTTONS
+========================================= */
 
 .cotton-content>div:nth-of-type(2) button {
 
     width: 100%;
 
     padding: 12px 10px;
+
+    box-sizing: border-box;
 
     border: 1px solid rgba(217, 164, 65, 0.6);
 
@@ -271,6 +275,56 @@
     border-color: #d9a441;
 }
 
+
+/* =========================================
+   MOBILE SUBTYPES
+========================================= */
+
+@media (max-width: 768px) {
+
+    .cotton-content>div:nth-of-type(2) {
+
+        /* Remove desktop positioning */
+        position: static;
+
+        /* Full available width */
+        width: 100%;
+
+        /* Row instead of column */
+        display: flex;
+        flex-direction: row;
+
+        /* Allow buttons to continue on next line */
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        /* Keep it in normal document flow */
+        margin-top: 25px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       MOBILE SUBTYPE BUTTONS
+    ========================= */
+
+    .cotton-content>div:nth-of-type(2) button {
+
+        /*
+           2 buttons per row approximately
+        */
+        width: calc(50% - 4px);
+
+        box-sizing: border-box;
+
+        text-align: left;
+
+        font-size: 11px;
+    }
+
+}
 
 /* =========================================
    SPECIFICATION BOX
@@ -757,4 +811,345 @@
 .cotton-content .fabric-next {
 
     z-index: 20;
+}
+
+/* =========================================
+   COTTON RESPONSIVE - MOBILE
+   STEP 1: SECTION + BACKGROUND + MAIN TEXT
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       COTTON SECTION
+    ========================= */
+
+    .cotton-section {
+        width: 100%;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+    /* =========================
+       COTTON CARD
+    ========================= */
+
+    .cotton-card {
+        width: 100%;
+        max-width: 100%;
+        height: 600px;
+
+        margin: 0 auto;
+
+        border-radius: 14px;
+
+        overflow: hidden;
+
+        position: relative;
+    }
+
+
+    /* =========================
+       BACKGROUND IMAGE
+    ========================= */
+
+    .cotton-image {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+
+        z-index: 0;
+    }
+
+
+    /* =========================
+       DARK OVERLAY
+    ========================= */
+
+    .cotton-card::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background: rgba(3, 12, 20, 0.48);
+
+        z-index: 1;
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    .cotton-content {
+        position: relative;
+
+        z-index: 2;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 35px 22px;
+
+        box-sizing: border-box;
+
+        color: white;
+    }
+
+
+    /* =========================
+       MAIN HEADING
+    ========================= */
+
+    .cotton-content h1 {
+        margin: 0 0 8px;
+
+        font-size: 30px;
+
+        line-height: 1.15;
+
+        font-weight: 700;
+
+        color: white;
+    }
+
+
+    /* =========================
+       SUB HEADING
+    ========================= */
+
+    .cotton-content h2 {
+        margin: 0 0 12px;
+
+        font-size: 17px;
+
+        line-height: 1.3;
+
+        color: #d9a441;
+    }
+
+
+    /* =========================
+       DESCRIPTION
+    ========================= */
+
+    .cotton-content>p {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 0 12px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        color: rgba(255, 255, 255, 0.9);
+
+        box-sizing: border-box;
+    }
+
+}
+
+/* =========================================
+   MOBILE OUTER BUTTONS
+   EXPLORE + REQUEST QUOTE
+
+   NOTE:
+   Specification Request Quote is NOT touched
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       EXPLORE COLLECTION
+    ========================= */
+
+    .cotton-content>button:first-of-type {
+
+        position: static;
+
+        display: inline-block;
+
+        margin-top: 15px;
+        margin-right: 8px;
+
+        /* padding baad mein adjust kar lenge */
+        padding: 10px 18px;
+
+        font-size: 13px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       OUTER REQUEST QUOTE
+    ========================= */
+
+    .cotton-content>.requestquote {
+
+        position: static;
+
+        display: inline-block;
+
+        margin: 15px 0 0 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Only OUTER Request Quote button */
+
+    .cotton-content>.requestquote .ant-btn {
+
+        height: auto;
+
+        padding: 10px 18px;
+
+        font-size: 13px;
+
+        box-sizing: border-box;
+    }
+
+}
+
+/* =========================================
+   MOBILE SPECIFICATION LAYOUT
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================
+       PARENT COTTON CARD
+    ===================================== */
+
+    .cotton-card {
+
+        width: 100%;
+
+        /*
+           IMPORTANT:
+           Parent must grow when specification
+           box appears.
+        */
+
+        height: auto;
+
+        min-height: 600px;
+
+        overflow: visible;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       COTTON CONTENT
+    ===================================== */
+
+    .cotton-content {
+
+        /*
+           Remove fixed desktop/mobile height
+        */
+
+        height: auto;
+
+        min-height: 600px;
+
+        width: 100%;
+
+        overflow: visible;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       SPECIFICATION BOX
+    ===================================== */
+
+    .cotton-content>div:nth-of-type(3) {
+
+        /*
+           VERY IMPORTANT
+
+           Desktop absolute box becomes
+           normal-flow box on mobile.
+        */
+
+        position: static;
+
+
+        /*
+           Full width of parent
+        */
+
+        width: 100%;
+
+        max-width: 100%;
+
+
+        /*
+           DO NOT use fixed 600px height
+        */
+
+        height: auto;
+
+        min-height: 0;
+
+
+        /*
+           Put specification below subtype
+        */
+
+        margin-top: 20px;
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+        margin-bottom: 0;
+
+
+        /*
+           Existing padding
+        */
+
+        padding: 16px;
+
+        box-sizing: border-box;
+
+
+        /*
+           Existing appearance
+        */
+
+        border: 1px solid rgba(217, 164, 65, 0.6);
+
+        border-radius: 14px;
+
+        background: rgba(3, 13, 23, 0.92);
+
+        color: white;
+
+
+        /*
+           Let the entire specification
+           contribute to parent height.
+        */
+
+        overflow: visible;
+    }
+
 }
