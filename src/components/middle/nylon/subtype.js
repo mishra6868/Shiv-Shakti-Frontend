@@ -26,13 +26,17 @@ function Subtypes({ setsubtype }) {
 
   };
 
+
   useEffect(() => {
+
     getData();
+
   }, []);
+
 
   return (
 
-    <div>
+    <div className="nylon-subtypes">
 
       {subtypes.map((item) => (
 
@@ -48,6 +52,7 @@ function Subtypes({ setsubtype }) {
     </div>
 
   );
+
 }
 
 export default Subtypes;

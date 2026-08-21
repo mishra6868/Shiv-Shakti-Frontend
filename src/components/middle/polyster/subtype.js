@@ -20,7 +20,7 @@ function Subtype({ setsubtype }) {
   }, []);
 
   return (
-    <div>
+    <div className="polyester-subtypes">
       {subtypes.map((item) => (
 
         <button

@@ -189,12 +189,11 @@
 
 }
 
-
 /* =========================
    SUBTYPE COLUMN
 ========================= */
 
-.polyester-content>div:nth-of-type(2) {
+.polyester-subtypes {
 
     position: absolute;
 
@@ -207,21 +206,30 @@
     flex-direction: column;
 
     gap: 10px;
+
+    z-index: 10;
 }
 
 
-/* Subtype buttons */
+/* =========================
+   SUBTYPE BUTTONS
+========================= */
 
-.polyester-content>div:nth-of-type(2) button {
+.polyester-subtypes button {
+
+    display: block;
 
     width: 100%;
 
     padding: 12px 10px;
 
+    box-sizing: border-box;
+
     border: 1px solid rgba(217, 164, 65, 0.6);
+
     border-radius: 7px;
 
-    background: rgba(5, 15, 25, 0.75);
+    background: rgba(5, 15, 25, 0.85);
 
     color: white;
 
@@ -232,14 +240,21 @@
     text-align: left;
 
     transition: 0.2s ease;
+
+    opacity: 1;
+
+    visibility: visible;
 }
 
-.polyester-content>div:nth-of-type(2) button:hover {
+
+.polyester-subtypes button:hover {
 
     background: rgba(217, 164, 65, 0.2);
 
     border-color: #d9a441;
 }
+
+
 
 
 /* =========================
@@ -602,4 +617,584 @@
 .specification-buttons>button:last-child:hover {
     background: rgba(217, 164, 65, 0.15);
     color: #d9a441;
+}
+
+/* =========================================================
+   POLYESTER FINAL RESPONSIVE
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   769px - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    /* =====================================
+       SECTION
+    ===================================== */
+
+    .polyester-section {
+
+        width: 100%;
+
+        padding: 25px 15px;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+    }
+
+
+    /* =====================================
+       CARD
+    ===================================== */
+
+    .polyester-card {
+
+        width: 100%;
+
+        height: 600px;
+
+        margin: 0 auto;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .polyester-content {
+
+        padding: 50px 40px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       SUBTYPES
+    ===================================== */
+
+    .polyester-subtypes {
+
+        width: 145px;
+
+        right: 250px;
+
+        gap: 9px;
+    }
+
+
+    .polyester-subtypes button {
+
+        padding: 11px 9px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   0px - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+
+    /* =====================================
+       SECTION
+    ===================================== */
+
+    .polyester-section {
+
+        width: 100%;
+
+        padding: 20px 12px;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+    }
+
+
+    /* =====================================
+       CARD
+    ===================================== */
+
+    .polyester-card {
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        margin: 0 auto;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+    }
+
+
+    /* =====================================
+       BACKGROUND IMAGE
+    ===================================== */
+
+    .polyester-image {
+
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+
+    /* =====================================
+       MAIN CONTENT
+    ===================================== */
+
+    .polyester-content {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 600px;
+
+        padding: 70px 22px 30px;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    /* =====================================
+       HEADING
+    ===================================== */
+
+    .polyester-content h1 {
+
+        margin: 0 0 8px;
+
+        font-size: 30px;
+
+        line-height: 1.15;
+    }
+
+
+    .polyester-content h2 {
+
+        margin: 0 0 14px;
+
+        font-size: 18px;
+
+        line-height: 1.3;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .polyester-content>p {
+
+        max-width: 100%;
+
+        margin: 0 0 12px;
+
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+
+    /* =====================================
+       EXPLORE COLLECTION
+    ===================================== */
+
+    .polyester-content>button:first-of-type {
+
+        position: static;
+
+        width: fit-content;
+
+        margin-top: 15px;
+
+        margin-right: 7px;
+
+        padding: 10px 18px;
+
+        font-size: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       OUTER REQUEST QUOTE
+    ===================================== */
+
+    .polyester-content>.requestquote {
+
+        position: static;
+
+        width: fit-content;
+
+        margin-top: 10px;
+
+        margin-left: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .polyester-content>.requestquote .ant-btn {
+
+        padding: 10px 18px;
+
+        font-size: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       SUBTYPE BUTTONS
+       MOBILE = ROWS
+    ===================================== */
+
+    .polyester-subtypes {
+
+        position: static;
+
+        width: 100%;
+
+        margin-top: 22px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       SUBTYPE BUTTON
+    ===================================== */
+
+    .polyester-subtypes button {
+
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 42px;
+
+        padding: 10px 9px;
+
+        box-sizing: border-box;
+
+        border: 1px solid rgba(217, 164, 65, 0.6);
+
+        border-radius: 7px;
+
+        background:
+            rgba(5, 15, 25, 0.85);
+
+        color: white;
+
+        font-size: 11px;
+
+        text-align: left;
+
+        cursor: pointer;
+
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+
+    /* =====================================
+       SPECIFICATION BOX
+       MOBILE = NORMAL FLOW
+    ===================================== */
+
+    .polyester-content>div:nth-of-type(3) {
+
+        position: static;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        margin-top: 22px;
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+        margin-bottom: 0;
+
+        padding: 14px;
+
+        box-sizing: border-box;
+
+        border-radius: 12px;
+
+        overflow: visible;
+    }
+
+
+    /* =====================================
+       SPECIFICATION BOTTOM BUTTONS
+    ===================================== */
+
+    .polyester-content .specification-buttons {
+
+        width: 100%;
+
+        display: flex;
+
+        gap: 7px;
+
+        margin-top: 15px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       SPECIFICATION REQUEST QUOTE
+    ===================================== */
+
+    .polyester-content .specification-buttons .requestquote {
+
+        position: static;
+
+        flex: 1;
+
+        width: 100%;
+
+        margin: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+
+    .polyester-content .specification-buttons .requestquote .ant-btn {
+
+        width: 100%;
+
+        height: 36px;
+
+        padding: 0 5px;
+
+        font-size: 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       DOWNLOAD
+    ===================================== */
+
+    .polyester-content .specification-buttons>button:last-child {
+
+        flex: 1;
+
+        width: 100%;
+
+        height: 36px;
+
+        padding: 0 5px;
+
+        font-size: 10px;
+
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   0px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    /* =====================================
+       SECTION
+    ===================================== */
+
+    .polyester-section {
+
+        padding: 15px 10px;
+    }
+
+
+    /* =====================================
+       CARD
+    ===================================== */
+
+    .polyester-card {
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        border-radius: 12px;
+
+        overflow: visible;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .polyester-content {
+
+        min-height: 600px;
+
+        padding: 65px 17px 25px;
+    }
+
+
+    /* =====================================
+       HEADING
+    ===================================== */
+
+    .polyester-content h1 {
+
+        font-size: 27px;
+    }
+
+
+    .polyester-content h2 {
+
+        font-size: 17px;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .polyester-content>p {
+
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================
+       OUTER BUTTONS
+    ===================================== */
+
+    .polyester-content>button:first-of-type {
+
+        margin-top: 14px;
+
+        padding: 9px 15px;
+
+        font-size: 11px;
+    }
+
+
+    .polyester-content>.requestquote {
+
+        margin-top: 9px;
+    }
+
+
+    .polyester-content>.requestquote .ant-btn {
+
+        padding: 9px 15px;
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================
+       SUBTYPES
+    ===================================== */
+
+    .polyester-subtypes {
+
+        width: 100%;
+
+        margin-top: 20px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+    }
+
+
+    .polyester-subtypes button {
+
+        min-height: 40px;
+
+        padding: 9px 8px;
+
+        font-size: 10px;
+    }
+
+
+    /* =====================================
+       SPECIFICATION
+    ===================================== */
+
+    .polyester-content>div:nth-of-type(3) {
+
+        width: 100%;
+
+        margin-top: 20px;
+
+        padding: 12px;
+    }
+
 }
