@@ -1,70 +1,110 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# Shiv Shakti Fabrics Website
 
-### `npm start`
+A full‑stack web application for showcasing fabrics, handling customer requests, and managing specifications.  
+Built with React.js (frontend), Ant Design (UI forms), Node.js/Express (backend), and MongoDB Atlas (cloud database).  
+Deployed on Netlify (frontend) and Render (backend).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Live Demo: [https://shivshaktifabrics.netlify.app](https://shivshaktifabrics.netlify.app)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Fabric Catalog: Browse fabrics like Polyester, Cotton, etc. Each fabric has subtype buttons fetched via GET requests.  
+- Specifications Box: Clicking a subtype dynamically loads specifications from the backend.  
+- Authentication: Secure login & signup forms using Ant Design, with POST requests to backend.  
+- Request Quote: Customers can submit quote requests via a form (POST request).  
+- Cloud Database: All user and fabric data stored in MongoDB Atlas.  
+- Responsive UI: Built with Ant Design for a clean, professional look.  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started (For Developers)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was bootstrapped with Create React App.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js (>= 14.x)  
+- npm or yarn  
+- MongoDB Atlas account (for backend setup)  
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+git clone https://github.com/mishra6868/Shiv-Shakti-Frontend.git
+cd Shiv-Shakti-Frontend
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running Locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Frontend runs at http://localhost:3000  
 
-## Learn More
+Backend runs separately (deployed on Render). If running locally, navigate to backend repo:  
+[https://github.com/mishra6868/Shiv-Shakti-Backend](https://github.com/mishra6868/Shiv-Shakti-Backend)  
+and start server with:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Frontend: React.js, Ant Design  
+Backend: Node.js + Express, REST API (GET/POST)  
+Database: MongoDB Atlas  
+Deployment: Netlify (frontend), Render (backend)  
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Project Structure
 
-### Making a Progressive Web App
+```
+shiv-shakti-frontend/
+│── public/            # Static assets
+│── src/
+│   ├── components/    # Reusable UI components
+│   ├── pages/         # Page-level components
+│   ├── services/      # API calls (axios/fetch)
+│   └── App.js         # Main app entry
+│── package.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## For Users
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Visit the live site: [https://shivshaktifabrics.netlify.app](https://shivshaktifabrics.netlify.app)  
+- Sign up or log in to access features.  
+- Browse fabrics and request quotes easily.  
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+Contributions are welcome!  
+1. Fork the repo  
+2. Create a new branch (feature/your-feature)  
+3. Commit changes  
+4. Push and open a Pull Request  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Contact
+
+Organization: Shiv Shakti Fabrics  
+Email: hm48031032@gmail.com  
+Phone: +91-6280759713  
+
+---
+
